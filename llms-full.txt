@@ -22,13 +22,13 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 - Consultation desks tracked: 6
 - Consultations tracked: 10
 - Interests registered: 21
-- Documented door moves: 12
+- Documented door moves: 22
 
 ## House rule
 No insinuation without a paper trail — access and influence are documented through
 published comments, RTI replies, minutes and appointment orders, not vibes.
 
-Built 2026-09-26 08:21 UTC.
+Built 2026-09-26 10:03 UTC.
 
 
 ## index.html
@@ -46,7 +46,7 @@ Layer 3 · rule-buyers · the sousveillance stack
  10 consultations tracked 
  2 open for comments 
  21 interests registered 
- 12 documented door moves 
+ 22 documented door moves 
 
  Comment-transparency scorecard 
  The first test of a captured consultation is whether anyone can see what was said to
@@ -93,7 +93,7 @@ the rule-writer. Stance per desk, as verified on the regulator's own site.
 when comments are secret, you cannot tell whether a rule was rewritten for the industry
 that asked — or tested against the public that pays. RBI's 2022 Charges-in-Payment-Systems
 paper drew submissions from every major industry body; none were published, and the
-commenters had to self-publish. A rule made in a closed room still lands on your bill. Live consultations 2026-10-25 Public Consultation Paper on Recalibrating Economics of Insurance Distribution (commissions, EoM, Bima Sugam, Public Insurance Registry) IRDAI Consultation Paper on Review of Closing Auction Session, Market Timings and Settlement Methodologies for Derivative Contracts SEBI The full consultation ledger → The revolving door, on the record 2025-11-20 R. Gandhi → Sahamati (account-aggregator ecosystem alliance) RBI 2025-09-03 R. Gandhi → Yes Bank Ltd RBI 2024-01-30 H. R. Khan → AU Small Finance Bank Ltd RBI 2023-06-30 U. K. Sinha → Max Healthcare Institute Ltd SEBI 2023-03-27 U. K. Sinha → NDTV Ltd SEBI 2023-01-13 U. K. Sinha → Nippon Life India Asset Management Ltd SEBI The full door ledger →
+commenters had to self-publish. A rule made in a closed room still lands on your bill. Live consultations 2026-10-25 Public Consultation Paper on Recalibrating Economics of Insurance Distribution (commissions, EoM, Bima Sugam, Public Insurance Registry) IRDAI Consultation Paper on Review of Closing Auction Session, Market Timings and Settlement Methodologies for Derivative Contracts SEBI The full consultation ledger → The revolving door, on the record 2026-09-16 N.S. Vishwanathan → Finance Industry Development Council (FIDC — NBFC SRO) Reserve Bank of India 2026-07-05 Debasish Panda → Bandhan Bank Ltd Insurance Regulatory and Development Authority of India 2025-11-20 R. Gandhi → Sahamati (account-aggregator ecosystem alliance) RBI 2025-09-03 R. Gandhi → Yes Bank Ltd RBI 2025-06-17 B.P. Kanungo → IIFL Finance Ltd Reserve Bank of India 2025-05-30 S.S. Mundra → PayU Payments Pvt Ltd Reserve Bank of India The full door ledger →
 
 ## consultations.html
 
@@ -358,6 +358,16 @@ appointment required the former employer's approval, that fact is stated.
  First chairman, steering committee of the Code for Responsible Lending (CRL) in micro-credit , Code for Responsible Lending (industry code) Industry committee 
  record 
  The micro-credit industry's self-regulatory code body is chaired by an ex-RBI deputy governor — the SROTrac layer borrowing a regulator's prestige; consumer redress depends on that code working. 
+ N.S. Vishwanathan Former office: Deputy Governor, RBI (2016–2020) Date Move On the record Why the person paying cares 
+ 16 Sep 2026 
+ Independent director , Finance Industry Development Council (FIDC — NBFC SRO) FIDC, the RBI-recognised SRO for NBFCs, announced his induction (alongside Bajaj Finance vice-chairman Rajeev Jain) on 16 Sep 2026; welcome event 17 Sep 
+ record 
+ A former banking regulator joining the SRO layer collapses the stack: the rule-borrowers' own trade body now carries a former rule-writer 
+
+ 27 Oct 2023 
+ Non-executive (part-time) chairman , Axis Bank Ltd Independent director on Axis board from 30 May 2023; part-time chairman effective 27 Oct 2023; RBI approval for a second term (27 Oct 2026–26 Oct 2029) reported Sep 2026; also EY India adviser and Razorpay advisory-board chair 
+ record 
+ The deputy governor who led banking supervision chairs a supervised bank — and got a second term, making the door a corridor 
  R. Gandhi (Rama Subramaniam Gandhi) Former office: Deputy Governor (2014–2017) Date Move On the record Why the person paying cares 
  14 May 2019 
  Additional Director , Yes Bank Ltd Appointed by RBI itself for two years 
@@ -373,6 +383,46 @@ appointment required the former employer's approval, that fact is stated.
  Independent Director , Vedanta Ltd Company board 
  record 
  India's markets watchdog chairman joined a large listed group's board a year after leaving SEBI — the classic securities-regulator revolving door. 
+ S.S. Mundra (Subhash Sheoratan Mundra) Former office: Deputy Governor, RBI (2015–2017) Date Move On the record Why the person paying cares 
+ 12 Aug 2020 
+ Independent director (2018), then non-executive chairman , Indiabulls Housing Finance Ltd Board elevated him from independent director (since 2018) to non-executive chairman on 12 Aug 2020 
+ record 
+ As RBI DG he supervised NBFCs and housing-finance lenders; he then chaired an NBFC whose loan practices sat inside that supervision 
+ S.S. Mundra Former office: Deputy Governor, RBI (2015–2017) Date Move On the record Why the person paying cares 
+ 30 May 2025 
+ Non-executive independent director , PayU Payments Pvt Ltd Board seat announced 30 May 2025, 17 days after PayU received its final RBI payment-aggregator licence (13 May 2025); also on BSE, Airtel Payments Bank and Havells boards 
+ record 
+ A licensed payment aggregator hired the former banking supervisor weeks after getting its licence — supervision and supervised meet at the same table 
+ Shyamala Gopinath Former office: Deputy Governor, RBI (2004–2011) Date Move On the record Why the person paying cares 
+ 02 Jan 2015 
+ Part-time non-executive chairperson , HDFC Bank Ltd Assumed charge 2 Jan 2015 for a three-year term; chaired the bank's audit, customer-service and fraud-monitoring committees per AGM notices 
+ record 
+ The RBI's senior-most woman regulator, who handled payments and forex, became chair of India's largest private bank and of its fraud-monitoring committee 
+ B.P. Kanungo Former office: Deputy Governor, RBI (2017–2020) Date Move On the record Why the person paying cares 
+ 17 Jun 2025 
+ Independent director (5-year term) , IIFL Finance Ltd Announced 16–17 Jun 2025; IIFL Finance is an RBI-regulated retail NBFC 
+ record 
+ The deputy governor who oversaw currency management and NBFC policy joined an NBFC board five years after retirement 
+ Prashant Saran Former office: Whole-Time Member, SEBI (2012–2016) Date Move On the record Why the person paying cares 
+ 26 May 2020 
+ Independent director (26 May 2020 – 25 May 2025) , KFin Technologies Ltd Five-year term effective 26 May 2020; KFin is a SEBI-regulated registrar and transfer agent for mutual funds and listed companies; he also directs Ascent Fund Services (Singapore) and Hexagram Fintech 
+ record 
+ SEBI's member for market intermediaries joined a SEBI-regulated market intermediary — the same desk at a different address 
+ Usha Thorat Former office: Deputy Governor, RBI (2005–2010) Date Move On the record Why the person paying cares 
+ 30 Apr 2016 
+ Independent Director (30 Apr 2016 - 29 Apr 2026, term ended) , Sanofi India Ltd Sanofi India board/AGM; appointment dated 30 Apr 2016 per the company's own annual reports (the company website's 2017 date conflicts with its own ARs and MCA records) 
+ record 
+ Post-RBI, the former bank regulator ended up chairing the company that computes the benchmarks Indian loans and bonds price off 
+ Debasish Panda Former office: Chairperson, IRDAI (2022–2025); earlier Financial Services Secretary Date Move On the record Why the person paying cares 
+ 05 Jul 2026 
+ Non-executive (part-time) chairman and independent director, 3-year term , Bandhan Bank Ltd RBI prior-approval letter dated 22 Apr 2026; board approved 25 Jun 2026; effective 5 Jul 2026, succeeding founder-chairman Anup Kumar Sinha — the second former regulator to chair Bandhan after H.R. Khan 
+ record 
+ Bandhan has now hired two former RBI/IRDAI chiefs as chairmen in seven years; the revolving door is becoming a hiring pipeline 
+ T.S. Vijayan Former office: Chairman, IRDAI (2013–2016); earlier LIC chairman Date Move On the record Why the person paying cares 
+ 03 Dec 2018 
+ Independent director (5-year term) , Yes Bank Ltd Appointed amid a board exodus; he also sat on the CEO search committee that selected Rana Kapoor's successor. Yes Bank was placed under RBI reconstruction in March 2020 
+ record 
+ The former insurance regulator sat on Yes Bank's board through its final crisis; depositors paid for the governance failure he was hired to guard against 
  What this ledger is not: it is not
 an accusation of wrongdoing, and no row implies a quid pro quo. It is the factual
 substrate for the capture question: who moved, when, to whom, with whose approval.
@@ -496,7 +546,7 @@ three — the rule-buyers.
  consultation desks scored 6 
  consultations tracked 10 
  interests registered 21 
- documented door moves 12 
+ documented door moves 22 
 
  The roadmap (build order from SOUSVEILLANCE.md) 
 

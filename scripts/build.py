@@ -90,7 +90,7 @@ def page(title, active, body, desc=None, extra_head=""):
 <body>
 <header class="site-header">
   <div class="wrap mast-main">
-    <a class="brand" href="/">Lobby<span>Watch</span><small>{TAGLINE}</small></a>
+    <a class="brand" href="/">Lobby<em>Watch</em><small>{TAGLINE}</small></a>
     <nav>{nav}</nav>
   </div>
 </header>
@@ -99,7 +99,7 @@ def page(title, active, body, desc=None, extra_head=""):
 </main>
 <section class="stack" aria-label="The sousveillance stack">
   <div class="wrap">
-    <p class="stack-kicker"><b>The sousveillance stack</b> — who writes, borrows and buys the rules</p>
+    <p class="stack-kicker"><b>The Sousveillance Stack</b> — who writes, borrows and buys the rules</p>
     <div class="stack-row">
       <a href="https://regtrac.cashlessconsumer.in/"><i>Layer 1 · rule-writers</i><b>RegTrac</b><span>India's statutory financial regulators</span><em>live</em></a>
       <a href="https://srotrac.cashlessconsumer.in/"><i>Layer 2 · rule-borrowers</i><b>SROTrac</b><span>RBI-recognised self-regulatory organisations</span><em>live</em></a>
