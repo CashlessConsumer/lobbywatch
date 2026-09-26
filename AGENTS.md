@@ -37,3 +37,9 @@ Shared gazette/ledger skin of the sousveillance stack (paper #ededf0, seal blue 
 ## Sibling-sync contract
 
 Stack band, masthead anatomy and footer are shared contract. Current state (2026-09-26): all three sites live, bands show LobbyWatch as Layer 3 "you are here" only on this site and as a live link on siblings. RegTrac/SROTrac generate their bands in `scripts/build.py` / `scripts/site.py` respectively.
+
+## Live status (2026-09-26)
+
+- Live at https://lobbywatch.cashlessconsumer.in — DNS CNAME added 2026-09-26; HTTP 200. GitHub Pages LE cert was still provisioning at publish time (https:// returned 000): once `curl -o /dev/null -w "%{http_code}" https://lobbywatch.cashlessconsumer.in/` returns 200, run `gh api -X PUT repos/CashlessConsumer/lobbywatch/pages -f cname=lobbywatch.cashlessconsumer.in -F https_enforced=true` (must be `-F`, not `-f`, or the API 422s on the boolean).
+- Doors ledger: 22 sourced moves (RBI DGs Gandhi/Khan/Mundra/Gopinath/Vishwanathan/Kanungo, SEBI WTM Sinha/Saran, IRDAI Panda/Vijayan, RBI DG Thorat). Malegam (SBI board + RBI committee chair) deliberately excluded — his SBI-directorship half lacks a single citable source; add only when an SBI annual-report citation is in hand.
+- Page shell: brand is `Lobby<em>Watch</em>` (the `.brand em` rule expects `em`, not `span` — SROTrac's own markup still has the span variant and renders plain ink; ported correctly here). Stack-band kicker casing follows SROTrac ("The Sousveillance Stack").
