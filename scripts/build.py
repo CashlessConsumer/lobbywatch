@@ -102,7 +102,7 @@ def page(title, active, body, desc=None, extra_head=""):
     <p class="stack-kicker"><b>The Sousveillance Stack</b> — who writes, borrows and buys the rules</p>
     <div class="stack-row">
       <a href="https://regtrac.cashlessconsumer.in/"><i>Layer 1 · rule-writers</i><b>RegTrac</b><span>India's statutory financial regulators</span><em>live</em></a>
-      <a href="https://srotrac.cashlessconsumer.in/"><i>Layer 2 · rule-borrowers</i><b>SROTrac</b><span>RBI-recognised self-regulatory organisations</span><em>live</em></a>
+      <a href="https://srotrac.cashlessconsumer.in/"><i>Layer 2 · rule-borrowers</i><b>SROTrac</b><span>India's financial-sector self-regulatory organisations</span><em>live</em></a>
       <a href="/"><i>Layer 3 · rule-buyers</i><b>LobbyWatch</b><span>consultations, access, revolving doors</span><em class="here">you are here</em></a>
     </div>
   </div>
