@@ -1,0 +1,31 @@
+# LobbyWatch — the rule-buyers of Indian finance, watched
+
+> Independent register of the interests that buy influence over India's financial rules:
+> a comment-transparency scorecard for the six statutory consultation desks (RBI, SEBI,
+> IRDAI, IBBI, PFRDA, IFSCA), a consultation ledger (were comments published?), an
+> interests register (industry bodies, think tanks, foreign lobbies, consumer side), a
+> sourced revolving-door ledger, and an RTI playbook with ready-to-file templates.
+> Layer 3 (rule-buyers) of the sousveillance stack — RegTrac (rule-writers) and SROTrac
+> (rule-borrowers) are layers 1 and 2. Run by CashlessConsumer. Data CC BY 4.0.
+
+Base URL: https://lobbywatch.cashlessconsumer.in
+
+## Pages
+- [Home](https://lobbywatch.cashlessconsumer.in/index.html): comment-transparency scorecard per desk, live consultations, latest door moves.
+- [Consultations](https://lobbywatch.cashlessconsumer.in/consultations.html): the consultation ledger — opened, closed, status, and whether comments were published.
+- [Interests](https://lobbywatch.cashlessconsumer.in/interests.html): the interests register — industry bodies, foreign lobbies, think tanks, consumer side, SROTrac layer links.
+- [Revolving Doors](https://lobbywatch.cashlessconsumer.in/doors.html): documented post-regulator appointments, per person, each with a record link.
+- [Access & RTI](https://lobbywatch.cashlessconsumer.in/access.html): ready-to-file RTI templates for unpublished comments and committee minutes + the filing log.
+- [About](https://lobbywatch.cashlessconsumer.in/about.html): ground rules, roadmap (index scrapers → comments corpus → clause-diff engine), how the stack joins.
+
+## Quick facts
+- Consultation desks tracked: 6
+- Consultations tracked: 10
+- Interests registered: 21
+- Documented door moves: 12
+
+## House rule
+No insinuation without a paper trail — access and influence are documented through
+published comments, RTI replies, minutes and appointment orders, not vibes.
+
+Built 2026-09-26 08:21 UTC.
