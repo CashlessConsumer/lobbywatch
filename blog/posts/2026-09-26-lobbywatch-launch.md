@@ -1,4 +1,5 @@
 ---
+category: note
 title: LobbyWatch opens its ledgers
 date: 2026-09-26
 summary: Why a rule-buyers register — what the consultation ledger, interests register and revolving-door ledger show on day one, and what gets added next.
