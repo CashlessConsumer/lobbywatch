@@ -32,6 +32,7 @@ NAV = [
     ("interests.html", "Interests"),
     ("doors.html", "Revolving Doors"),
     ("access.html", "Access & RTI"),
+    ("blog/index.html", "Blog"),
     ("about.html", "About"),
 ]
 
@@ -513,6 +514,10 @@ Built {built}.
     today = time.strftime("%Y-%m-%d")
     for fname, _ in pages:
         sitemap.append(f"<url><loc>{BASE}/{fname}</loc><lastmod>{today}</lastmod></url>")
+    blog_dir = ROOT / "blog"
+    if blog_dir.is_dir():
+        for bp in sorted(blog_dir.glob("*.html")):
+            sitemap.append(f"<url><loc>{BASE}/blog/{bp.name}</loc><lastmod>{today}</lastmod></url>")
     sitemap.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(sitemap), encoding="utf-8")
 
