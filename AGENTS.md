@@ -17,10 +17,16 @@ Layer 3 (rule-buyers) of the sousveillance stack: RegTrac (rule-writers, `Projec
 
 ## Build & deploy
 
-- Deploy = push to `main` (GitHub Actions → Pages). Live: https://lobbywatch.cashlessconsumer.in (CNAME in repo; **DNS CNAME record `lobbywatch → cashlessconsumer.github.io` needs manual add on Netlify DNS** — token cannot write DNS records; until then the site serves at https://cashlessconsumer.github.io/lobbywatch/).
+- Deploy = push to `main` (GitHub Actions → Pages). Live: https://lobbywatch.cashlessconsumer.in (CNAME added 2026-09-26 on Netlify DNS; HTTP live, HTTPS cert provisioning — see Live status).
 - `tests/test_live.py [--base URL]` is the post-deploy smoke test (defaults to custom domain, falls back to GH Pages URL).
 - duckdb ≥1.4: explicit column types in CREATE TABLE (build.py emits VARCHAR).
 - Per-rule: explicit absolute output paths for any CLI that writes files; `agent-browser screenshot` takes `--full`, not `--full-page`.
+
+## Pipeline (parity with RegTrac/SROTrac, 2026-09-27)
+
+- `scripts/bloggen.py` — builds `blog/index.html` + `blog/<slug>.html` from `blog/posts/*.md` (front matter: title, date, summary; body starts with an H1). Same pattern as SROTrac's bloggen. Inaugural post: 2026-09-26 launch note.
+- `scripts/refresh.sh` — daily refresh: gates (`tests/check_data.py`, `tests/verify_urls.py`, both non-fatal — SEBI/IRDAI walls curl from some egresses; GH-runners CI is the arbiter) → `build.py` → `bloggen.py` → second `build.py` (picks new posts up in sitemap/llms) → commit+push on change. No fetch step yet: consultation-index scraper is roadmap item 1; when it lands, add its fetch to refresh.sh.
+- Automations: daily refresh 08:00 IST `8de7b8fb-63bd-488b-b02f-1e3b25f25e51`; weekly blog brief Mon 09:30 IST (after the RegTrac/SROTrac 09:20 weeklies) `b59685aa-36af-4c11-a23c-38808801d2f6`. Both post one line to Discord #policy-research (1540886397621458).
 
 ## Design language
 
