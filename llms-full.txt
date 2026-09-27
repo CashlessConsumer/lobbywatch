@@ -28,7 +28,7 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 No insinuation without a paper trail — access and influence are documented through
 published comments, RTI replies, minutes and appointment orders, not vibes.
 
-Built 2026-09-27 09:34 UTC.
+Built 2026-09-27 10:13 UTC.
 
 
 ## index.html
@@ -625,6 +625,14 @@ membership that wanted it is a SROTrac fact.
 HTML is generated from the CSVs. Data licensed CC BY 4.0 (attribute
 "LobbyWatch / CashlessConsumer"); code MIT. Agent entry point:
  llms.txt .
+
+## 404.html
+
+Page not found — LobbyWatch 
+
+ LOBBY WATCH · a cashlessconsumer register 
+ Page not found 
+ The ledger has no page at this address. Start from the register or search the full sousveillance stack at /search .
 
 ## search.html
 

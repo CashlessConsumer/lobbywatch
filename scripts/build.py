@@ -38,6 +38,9 @@ NAV = [
 ]
 
 
+FORTY = '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="robots" content="noindex">\n<title>Page not found — LobbyWatch</title>\n<style>body{{margin:0;background:#ededf0;color:#1c1d22;font-family:Georgia,\'Times New Roman\',serif;display:flex;min-height:100vh;align-items:center;justify-content:center}}main{{max-width:34rem;padding:2rem;text-align:center}}.kicker{{font-family:\'IBM Plex Mono\',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#1d4ed8}}h1{{font-size:2rem;margin:.4rem 0 .8rem}}p{{line-height:1.6;color:#44454f}}a{{color:#1d4ed8}}</style>\n</head>\n<body><main>\n<div class="kicker">LOBBY WATCH · a cashlessconsumer register</div>\n<h1>Page not found</h1>\n<p>The ledger has no page at this address. Start from the <a href="/">register</a> or search the full sousveillance stack at <a href="/search.html">/search</a>.</p>\n</main></body>\n</html>\n'
+
+
 def esc(s):
     return html.escape(str(s or ""), quote=True)
 
@@ -157,6 +160,12 @@ def stance_pill(v):
 
 
 def build_home(regs, consults, interests, doors):
+    ld = """<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://lobbywatch.cashlessconsumer.in/#org","name":"CashlessConsumer","url":"https://cashlessconsumer.in","logo":"https://lobbywatch.cashlessconsumer.in/og.png"},
+{"@type":"WebSite","@id":"https://lobbywatch.cashlessconsumer.in/#site","url":"https://lobbywatch.cashlessconsumer.in/","name":"LobbyWatch","publisher":{"@id":"https://lobbywatch.cashlessconsumer.in/#org"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://lobbywatch.cashlessconsumer.in/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}},
+{"@type":"Dataset","name":"LobbyWatch — consultation ledger, interests register, revolving-door ledger","description":"Public-interest ledgers of who is trying to influence India's financial rule-writing: consultation records, meeting access, regulatory-to-industry job moves.","url":"https://lobbywatch.cashlessconsumer.in/","license":"https://creativecommons.org/licenses/by/4.0/","creator":{"@id":"https://lobbywatch.cashlessconsumer.in/#org"},"distribution":{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://lobbywatch.cashlessconsumer.in/lobbywatch.json"}}]}
+</script>"""
     live = [c for c in consults if (c["status"] or "").lower() == "live"]
     yes = sum(1 for r in regs if (r["publishes_comments"] or "").strip().lower() == "yes")
     body = f"""<section class="hero"><div class="wrap">
@@ -472,6 +481,12 @@ def write_duckdb(regs, consults, interests, doors, rti_rows):
     return out
 
 
+def build_404():
+    return page("404 — LobbyWatch", "about.html",
+        """<section class="page-head"><div class="wrap"><h1>Page not found</h1>
+<p>The address you tried does not exist on LobbyWatch. <a href="/">Start at the index</a> or <a href="search.html">search the stack</a>.</p>
+</div></section>""", extra_head='<meta name="robots" content="noindex">')
+
 def strip_html(h):
     import re
     h = re.sub(r"<script.*?</script>", "", h, flags=re.S)
@@ -604,6 +619,20 @@ LAYER_CFG = '{"key":"regtrac","label":"RegTrac \\u2014 rule-writers","base":"htt
 BUILD_TS = '202609270742'
 
 
+HOME_LD = ('<script type="application/ld+json">' + json.dumps({
+    "@context": "https://schema.org",
+    "@graph": [
+        {"@type": "Organization", "name": "LobbyWatch", "url": BASE,
+         "logo": BASE + "/og.png", "publisher": {"@type": "Organization", "name": "CashlessConsumer"}},
+        {"@type": "WebSite", "name": "LobbyWatch", "url": BASE,
+         "description": "The rule-buyers of Indian finance, watched: consultation records, meeting access, revolving door."},
+        {"@type": "Dataset", "name": "LobbyWatch ledgers", "url": BASE + "/lobbywatch.json",
+         "license": "https://creativecommons.org/licenses/by/4.0/",
+         "creator": {"@type": "Organization", "name": "CashlessConsumer"},
+         "distribution": {"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": BASE + "/lobbywatch.json"}}
+    ]}, ensure_ascii=False) + '</script>')
+
+
 def main():
     regs = read_csv("regulators.csv")
     consults = read_csv("consultations.csv")
@@ -618,6 +647,7 @@ def main():
         ("doors.html", build_doors(doors)),
         ("access.html", build_access(rti_rows)),
         ("about.html", build_about(regs, consults, interests, doors)),
+        ("404.html", FORTY),
         ("search.html", build_search_page()),
     ]
     for fname, body in pages:
@@ -629,9 +659,11 @@ def main():
             "access.html": "Access & RTI",
             "about.html": "About",
             "search.html": "Search",
+            "404.html": "About",
         }[fname]
+        extra = HOME_LD if fname == "index.html" else ""
         (ROOT / fname).write_text(
-            page(title, fname, body), encoding="utf-8")
+            page(title, fname, body, extra_head=extra), encoding="utf-8")
 
     write_agent_files(pages, {
         "regs": len(regs), "consults": len(consults),
