@@ -33,12 +33,25 @@ NAV = [
     ("doors.html", "Revolving Doors"),
     ("access.html", "Access & RTI"),
     ("blog/index.html", "Blog"),
+    ("search.html", "Search"),
     ("about.html", "About"),
 ]
 
 
 def esc(s):
     return html.escape(str(s or ""), quote=True)
+
+
+
+
+def build_search_page():
+    cfg = "[%s]" % LAYER_CFG
+    extra = (SEARCH_STYLE
+             + "<script>window.STACK_SEARCH={layers:" + cfg + "};</script>"
+             + '<script src="/js/search.js?v=' + BUILD_TS + '" defer></script>')
+    return page("Search the stack \u2014 LobbyWatch", "search.html", PAGE_BODY,
+                desc="One query across the sousveillance stack: RegTrac, SROTrac, LobbyWatch.",
+                extra_head=extra)
 
 
 def read_csv(name):
@@ -470,6 +483,7 @@ def strip_html(h):
 
 
 def write_agent_files(pages, stats):
+    import json as _json, re as _re
     built = time.strftime("%Y-%m-%d %H:%M UTC")
     llms = f"""# LobbyWatch — the rule-buyers of Indian finance, watched
 
@@ -521,6 +535,34 @@ Built {built}.
     sitemap.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(sitemap), encoding="utf-8")
 
+    import json as _json
+
+    def _strip(h):
+        import re as _re
+        h = _re.sub(r"(?is)<(script|style).*?</\1>", " ", h)
+        h = _re.sub(r"<[^>]+>", " ", h)
+        return _re.sub(r"\s+", " ", h).strip()
+
+    idx = []
+    for fname, html in pages:
+        if fname == "search.html":
+            continue
+        t = _re.search(r"<title>(.*?)</title>", html, _re.S)
+        d = _re.search(r'<meta name="description" content="([^"]*)"', html)
+        idx.append({"url": fname, "title": t.group(1).strip() if t else fname,
+                    "desc": d.group(1) if d else "", "text": _strip(html)[:4000]})
+    meta = {"generated": BUILD_TS, "license": "CC BY 4.0", "source": BASE}
+    (ROOT / "search-index.json").write_text(
+        _json.dumps(dict(meta, pages=idx), ensure_ascii=False), encoding="utf-8")
+    regs_csv = list(csv.DictReader(open(ROOT / "data" / "regulators.csv", encoding="utf-8")))
+    consults_csv = list(csv.DictReader(open(ROOT / "data" / "consultations.csv", encoding="utf-8")))
+    interests_csv = list(csv.DictReader(open(ROOT / "data" / "interests.csv", encoding="utf-8")))
+    doors_csv = list(csv.DictReader(open(ROOT / "data" / "doors.csv", encoding="utf-8")))
+    rti_csv = list(csv.DictReader(open(ROOT / "data" / "rti_log.csv", encoding="utf-8")))
+    (ROOT / "lobbywatch.json").write_text(_json.dumps(dict(
+        meta, regulators=regs_csv, consultations=consults_csv, interests=interests_csv,
+        doors=doors_csv, rti_log=rti_csv), ensure_ascii=False), encoding="utf-8")
+    print("wrote search-index.json + lobbywatch.json")
     (ROOT / "robots.txt").write_text(
         "User-agent: *\nAllow: /\n\n"
         "User-agent: GPTBot\nAllow: /\n\n"
@@ -556,6 +598,12 @@ def write_og():
     img.save(ROOT / "og.png")
 
 
+SEARCH_STYLE = '<style>.search-page input{width:100%;font:inherit;font-size:1.15rem;padding:.6em .8em;border:1px solid #b9b9c4;background:#fff;border-radius:4px;margin:.6em 0 1em}.search-page input:focus{outline:2px solid #1d4ed8;outline-offset:1px}.ss-layer{margin:1.2em 0}.ss-layer h2{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:#44454f;margin:0 0 .5em}.ss-count{font-family:monospace;background:#e3e6f8;border-radius:3px;padding:0 .4em;margin-left:.4em}.ss-hit{margin:.55em 0;display:flex;flex-direction:column}.ss-hit a{font-weight:600}.ss-desc{color:#44454f}.ss-snip{color:#5a5b66;font-size:.9em}.ss-mute{color:#5a5b66}</style>'
+PAGE_BODY = '<section class="wrap search-page"><h1>Search the stack</h1><p>One query across the sousveillance stack: rule-writers (RegTrac), rule-borrowers (SROTrac), rule-buyers (LobbyWatch). Press <kbd>/</kbd> to focus.</p><input id="stack-search-input" type="search" autocomplete="off" autofocus placeholder="e.g. UPI, NBFC, IBBI, revolving door, consultation"><div id="stack-search-status" aria-live="polite"></div><div id="stack-search-results"></div></section>'
+LAYER_CFG = '{"key":"regtrac","label":"RegTrac \\u2014 rule-writers","base":"https://regtrac.cashlessconsumer.in/"},{"key":"srotrac","label":"SROTrac \\u2014 rule-borrowers","base":"https://srotrac.cashlessconsumer.in/"},{"key":"lobbywatch","label":"LobbyWatch \\u2014 rule-buyers","base":"https://lobbywatch.cashlessconsumer.in/","self":true}'
+BUILD_TS = '202609270742'
+
+
 def main():
     regs = read_csv("regulators.csv")
     consults = read_csv("consultations.csv")
@@ -570,6 +618,7 @@ def main():
         ("doors.html", build_doors(doors)),
         ("access.html", build_access(rti_rows)),
         ("about.html", build_about(regs, consults, interests, doors)),
+        ("search.html", build_search_page()),
     ]
     for fname, body in pages:
         title = {
@@ -579,6 +628,7 @@ def main():
             "doors.html": "Revolving Doors",
             "access.html": "Access & RTI",
             "about.html": "About",
+            "search.html": "Search",
         }[fname]
         (ROOT / fname).write_text(
             page(title, fname, body), encoding="utf-8")

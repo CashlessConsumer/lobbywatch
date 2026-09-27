@@ -28,7 +28,7 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 No insinuation without a paper trail — access and influence are documented through
 published comments, RTI replies, minutes and appointment orders, not vibes.
 
-Built 2026-09-27 07:22 UTC.
+Built 2026-09-27 07:48 UTC.
 
 
 ## index.html
@@ -625,3 +625,26 @@ membership that wanted it is a SROTrac fact.
 HTML is generated from the CSVs. Data licensed CC BY 4.0 (attribute
 "LobbyWatch / CashlessConsumer"); code MIT. Agent entry point:
  llms.txt .
+
+## search.html
+
+Search the stack — LobbyWatch — LobbyWatch 
+
+ L '>
+
+ Lobby Watch A CashlessConsumer Register 
+ Home Consultations Interests Revolving Doors Access & RTI Blog Search About 
+
+ Search the stack One query across the sousveillance stack: rule-writers (RegTrac), rule-borrowers (SROTrac), rule-buyers (LobbyWatch). Press / to focus. 
+
+ The Sousveillance Stack — who writes, borrows and buys the rules 
+
+ Layer 1 · rule-writers RegTrac India's statutory financial regulators live 
+ Layer 2 · rule-borrowers SROTrac India's financial-sector self-regulatory organisations live 
+ Layer 3 · rule-buyers LobbyWatch consultations, access, revolving doors you are here 
+
+ LobbyWatch — an independent CashlessConsumer project tracking who buys influence over India's financial rules: consultation records, meeting access and revolving doors. Not affiliated with any regulator, association or company; every claim is sourced per entry. 
+ Layer 3 of the sousveillance stack: RegTrac (rule-writers) · SROTrac (rule-borrowers) · LobbyWatch (rule-buyers). 
+ cashlessconsumer.in · data & code: GitHub · methodology · llms.txt 
+ Data: CC BY 4.0 — copy, remix and republish with attribution to LobbyWatch / CashlessConsumer. Code: MIT. 
+ No insinuation without a paper trail — access and influence are documented through published comments, RTI replies, minutes and appointment orders, not vibes.
