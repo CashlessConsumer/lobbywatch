@@ -28,7 +28,7 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 No insinuation without a paper trail — access and influence are documented through
 published comments, RTI replies, minutes and appointment orders, not vibes.
 
-Built 2026-10-05 02:32 UTC.
+Built 2026-10-05 04:05 UTC.
 
 
 ## index.html
@@ -44,7 +44,7 @@ Layer 3 · rule-buyers · the sousveillance stack
 
  6 consultation desks 
  10 consultations tracked 
- 2 open for comments 
+ 1 open for comments 
  21 interests registered 
  32 documented door moves 
 
@@ -93,7 +93,7 @@ the rule-writer. Stance per desk, as verified on the regulator's own site.
 when comments are secret, you cannot tell whether a rule was rewritten for the industry
 that asked — or tested against the public that pays. RBI's 2022 Charges-in-Payment-Systems
 paper drew submissions from every major industry body; none were published, and the
-commenters had to self-publish. A rule made in a closed room still lands on your bill. Live consultations 2026-10-25 Public Consultation Paper on Recalibrating Economics of Insurance Distribution (commissions, EoM, Bima Sugam, Public Insurance Registry) IRDAI Consultation Paper on Review of Closing Auction Session, Market Timings and Settlement Methodologies for Derivative Contracts SEBI The full consultation ledger → The revolving door, on the record 2026-09-16 N.S. Vishwanathan → Finance Industry Development Council (FIDC — NBFC SRO) Reserve Bank of India 2026-07-05 Debasish Panda → Bandhan Bank Ltd Insurance Regulatory and Development Authority of India 2026-06-01 Ashwani Bhatia → ICICI Bank Ltd Securities and Exchange Board of India 2026-02-25 Ajay Tyagi → PRISM (Oravel Stays Ltd, Oyo parent) Securities and Exchange Board of India 2026-01-29 G. Mahalingam (Gurumoorthy Mahalingam) → Life Insurance Corporation of India Securities and Exchange Board of India 2025-12-19 B.P. Kanungo → IIFL Finance Ltd Reserve Bank of India The full door ledger →
+commenters had to self-publish. A rule made in a closed room still lands on your bill. Live consultations 2026-10-25 Public Consultation Paper on Recalibrating Economics of Insurance Distribution (commissions, EoM, Bima Sugam, Public Insurance Registry) IRDAI The full consultation ledger → The revolving door, on the record 2026-09-16 N.S. Vishwanathan → Finance Industry Development Council (FIDC — NBFC SRO) Reserve Bank of India 2026-07-05 Debasish Panda → Bandhan Bank Ltd Insurance Regulatory and Development Authority of India 2026-06-01 Ashwani Bhatia → ICICI Bank Ltd Securities and Exchange Board of India 2026-02-25 Ajay Tyagi → PRISM (Oravel Stays Ltd, Oyo parent) Securities and Exchange Board of India 2026-01-29 G. Mahalingam (Gurumoorthy Mahalingam) → Life Insurance Corporation of India Securities and Exchange Board of India 2025-12-19 B.P. Kanungo → IIFL Finance Ltd Reserve Bank of India The full door ledger →
 
 ## consultations.html
 
@@ -121,10 +121,10 @@ published?
  unknown source 
 
  12 Sep 2026 
-
- Consultation Paper on Review of Closing Auction Session, Market Timings and Settlement Methodologies for Derivative Contracts 
+ 03 Oct 2026 
+ Consultation Paper on Review of Closing Auction Session, Market Timings and Settlement Methodologies for Derivative Contracts SEBI's verified account reported 20,000 comments by 19:00 IST on the final submission day, 3 Oct 2026. Submissions and the regulator's response remain to be tracked. 
  SEBI 
- live 
+ closed 
  yes source 
 
  24 Jul 2026 
