@@ -1,0 +1,17 @@
+consultation_id,seq,feedback,outcome,response,regulation,commenter_class,inferred
+rbi-exim-fema-2026,1,Apply regulations uniformly to transactions in process as well as fresh transactions,accepted,Regulation modified,Regulation 1(2),Exporters / importers,yes
+rbi-exim-fema-2026,2,Definition of software may be provided,accepted,Definition provided,Regulation 2(1)(e),Software industry,yes
+rbi-exim-fema-2026,3,STPI may also be retained as the specified authority for non-physical software exports,accepted,"STPI, in addition to the AD, made the specified authority for non-physical software exports",Regulation 2(1)(f),Software industry / STPI units,yes
+rbi-exim-fema-2026,4,EDF exemptions: (1) the EDF waiver in existing regulations may be continued; (2) service exports may be exempted from EDF requirements,not_accepted,"Section 7 of FEMA, 1999 makes declaration of exports mandatory; process and timeframe made flexible for ease of doing business",-,Service exporters incl. freelancer / platform interests,yes
+rbi-exim-fema-2026,5,Submission of EDF not necessary if the Shipping Bill covers all information,accepted,Clarified,Regulation 3(1),Goods exporters,yes
+rbi-exim-fema-2026,6,A traveller from India moving personal effects shall not be treated as exporter,accepted,Clarified,Regulation 3(1),Individuals / travellers,yes
+rbi-exim-fema-2026,7,Timelines for submission of EDF for services; allow service exporters a single EDF consolidating all invoice details regardless of individual invoice values,accepted,Provided,Regulation 3(2),Service exporters,yes
+rbi-exim-fema-2026,8,Relaxation in direct dispatch of documents,accepted,The concerned clause has been omitted from the final regulations,-,Exporters,yes
+rbi-exim-fema-2026,9,Introduce threshold-based compliance for marking off of EDPMS and IDPMS entries,accepted,Introduced,Regulation 4(2),SME exporters,yes
+rbi-exim-fema-2026,10,Relaxation in third-party payments and receipts without requiring AD permission,accepted,Provided,Regulation 8,Exporters / traders,yes
+rbi-exim-fema-2026,11,Provide timeline for making import payments and a maximum extension period,not_accepted,Regulations simplified; timelines would be as per the contract,-,Importers,yes
+rbi-exim-fema-2026,12,Relaxation to handle change of ADs for advance payments in exports and imports,accepted,Provided,Regulations 10(1) and 10(2),Exporters / importers,yes
+rbi-exim-fema-2026,13,Memorandum of Instructions on Project and Service Exports (PEM) may be retained,not_accepted,Regulations simplified; prescriptive rules removed for principle-based regulations; ADs can handle transactions as per their internal policy,-,Project / service exporters (EPC ecosystem),yes
+rbi-exim-fema-2026,14,Merchanting Trade Transaction: (1) relax same-AD routing for outward and inward remittances; (2) let ADs handle third-party receipt and payment in MTT,accepted,Provided,Regulation 16(1),Trading houses / merchant exporters,yes
+rbi-exim-fema-2026,15,ADs requested relaxation up to five working days for entering details in E/IDPMS,accepted,Provided,Regulation 18(1),AD banks — the only commenter class RBI names,no
+rbi-exim-fema-2026,16,Specific instructions / enabler may be provided on reduction in import value,accepted,Provided,Regulation 18(1)(k),Importers,yes

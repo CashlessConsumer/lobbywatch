@@ -13,6 +13,7 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 ## Pages
 - [Home](https://lobbywatch.cashlessconsumer.in/index.html): comment-transparency scorecard per desk, live consultations, latest door moves.
 - [Consultations](https://lobbywatch.cashlessconsumer.in/consultations.html): the consultation ledger — opened, closed, status, and whether comments were published.
+- [Case file](https://lobbywatch.cashlessconsumer.in/consultation-rbi-exim-fema-2026.html): per-consultation anatomy — timeline, feedback scorecard, watchpoints.
 - [Interests](https://lobbywatch.cashlessconsumer.in/interests.html): the interests register — industry bodies, foreign lobbies, think tanks, consumer side, SROTrac layer links.
 - [Revolving Doors](https://lobbywatch.cashlessconsumer.in/doors.html): documented post-regulator appointments, per person, each with a record link.
 - [Access & RTI](https://lobbywatch.cashlessconsumer.in/access.html): ready-to-file RTI templates for unpublished comments and committee minutes + the filing log.
@@ -20,7 +21,7 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 
 ## Quick facts
 - Consultation desks tracked: 6
-- Consultations tracked: 10
+- Consultations tracked: 11
 - Interests registered: 21
 - Documented door moves: 32
 
@@ -28,7 +29,7 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 No insinuation without a paper trail — access and influence are documented through
 published comments, RTI replies, minutes and appointment orders, not vibes.
 
-Built 2026-10-05 04:05 UTC.
+Built 2026-10-06 08:06 UTC.
 
 
 ## index.html
@@ -43,7 +44,7 @@ Layer 3 · rule-buyers · the sousveillance stack
  watching the watchers, room three 
 
  6 consultation desks 
- 10 consultations tracked 
+ 11 consultations tracked 
  1 open for comments 
  21 interests registered 
  32 documented door moves 
@@ -102,7 +103,7 @@ the consultation ledger
  Consultation papers of India's financial regulators — with the one fact
 that decides whether a consultation means anything: were the comments
 published? 
- ibbi 2 irdai 2 pfrda 1 rbi 2 sebi 3 
+ ibbi 2 irdai 2 pfrda 1 rbi 3 sebi 3 
 
  all 
  live 
@@ -168,6 +169,13 @@ published?
  SEBI 
  final 
  yes source 
+
+ 02 Jul 2024 
+ 30 Apr 2025 
+ Regulations + Directions on Export and Import of Goods and Services (unified EDF for goods/services/software; SOFTEX folded in) RBI published a 15-item summarized feedback annex (PR 1933) - responses ARE published but commenter identities are not. Rejected asks: EDF waiver continuation, service-export EDF exemption (FEMA s.7 cited), PEM retention. Accepted: monthly consolidated EDF, threshold marking-off, STPI retention, AD 5-day EDPMS window. In force 2026-10-01. Case file: /consultation-rbi-exim-fema-2026.html 
+ RBI 
+ final 
+ partial source 
 
  17 Aug 2022 
  03 Oct 2022 
@@ -594,7 +602,7 @@ three — the rule-buyers.
  What is in the register today 
 
  consultation desks scored 6 
- consultations tracked 10 
+ consultations tracked 11 
  interests registered 21 
  documented door moves 32 
 
@@ -656,3 +664,138 @@ Search the stack — LobbyWatch — LobbyWatch
  cashlessconsumer.in · data & code: GitHub · methodology · llms.txt 
  Data: CC BY 4.0 — copy, remix and republish with attribution to LobbyWatch / CashlessConsumer. Code: MIT. 
  No insinuation without a paper trail — access and influence are documented through published comments, RTI replies, minutes and appointment orders, not vibes.
+
+## consultation-rbi-exim-fema-2026.html
+
+case file · consultation anatomy 
+ Regulations + Directions on Export and Import of Goods and Services (unified EDF for goods/services/software; SOFTEX folded in) 
+ RBI replaced the 2015 Regulations, two master directions and 167 circulars with one principle-based rule for everything crossing the border — goods, services, software. Unusually consultative by this desk's standards: two draft rounds, and a published summary of who asked for what. This case file reads the ledger of asks — who got their timing concessions, and who lost the substantive ask. 
+ window 02 Jul 2024 → 30 Apr 2025 status final feedback items 16 accepted 13 rejected 3 comments published? partial What changed on the ground, from 1 October 2026: one Export
+Declaration Form for goods, services and software (SOFTEX folded in); service exporters file one consolidated
+EDF a month, due within 30 days of month-end, no minimum invoice value; banks credit only after the EDPMS
+match; proceeds due within nine months (12 if invoiced in rupees); non-filing is a FEMA contravention under
+s.13 (penalty up to 3× the sum involved). The consultation timeline 
+ Date What happened 02 Jul 2024 Draft Regulations and Draft Directions published; comments invited by email until 2024-09-01. 04 Apr 2025 Revised draft Regulations and Directions issued; comment window until 2025-04-30. 13 Jan 2026 Final Regulations notified in the Gazette of India (FEMA 23(R)/2026-RB). 16 Jan 2026 Directions issued; Press Release 1933 carries a 'Statement on feedback received' annex — a first for this desk. 01 Oct 2026 Regulations and Directions in force. The 2015 Regulations, both master directions and 167 circulars are superseded. The feedback scorecard — who asked, who won 
+ Reproduced from RBI's Statement
+on feedback received (annex to Press Release 1933; archived copy in the repo's
+ notes/evidence/ — the live rbidocs host is CAPTCHA-walled for bots). The commenter class 
+column is our inference from the annex wording; RBI names no commenters — AD banks are the only class
+the annex identifies ("ADs had requested"). 
+ # The ask (annex wording) Outcome RBI response Where it landed Commenter class (inferred) 
+ 1 
+ Apply regulations uniformly to transactions in process as well as fresh transactions 
+ accepted 
+ Regulation modified 
+ Regulation 1(2) 
+ Exporters / importers 
+
+ 2 
+ Definition of software may be provided 
+ accepted 
+ Definition provided 
+ Regulation 2(1)(e) 
+ Software industry 
+
+ 3 
+ STPI may also be retained as the specified authority for non-physical software exports 
+ accepted 
+ STPI, in addition to the AD, made the specified authority for non-physical software exports 
+ Regulation 2(1)(f) 
+ Software industry / STPI units 
+
+ 4 
+ EDF exemptions: (1) the EDF waiver in existing regulations may be continued; (2) service exports may be exempted from EDF requirements 
+ rejected 
+ Section 7 of FEMA, 1999 makes declaration of exports mandatory; process and timeframe made flexible for ease of doing business 
+ - 
+ Service exporters incl. freelancer / platform interests 
+
+ 5 
+ Submission of EDF not necessary if the Shipping Bill covers all information 
+ accepted 
+ Clarified 
+ Regulation 3(1) 
+ Goods exporters 
+
+ 6 
+ A traveller from India moving personal effects shall not be treated as exporter 
+ accepted 
+ Clarified 
+ Regulation 3(1) 
+ Individuals / travellers 
+
+ 7 
+ Timelines for submission of EDF for services; allow service exporters a single EDF consolidating all invoice details regardless of individual invoice values 
+ accepted 
+ Provided 
+ Regulation 3(2) 
+ Service exporters 
+
+ 8 
+ Relaxation in direct dispatch of documents 
+ accepted 
+ The concerned clause has been omitted from the final regulations 
+ - 
+ Exporters 
+
+ 9 
+ Introduce threshold-based compliance for marking off of EDPMS and IDPMS entries 
+ accepted 
+ Introduced 
+ Regulation 4(2) 
+ SME exporters 
+
+ 10 
+ Relaxation in third-party payments and receipts without requiring AD permission 
+ accepted 
+ Provided 
+ Regulation 8 
+ Exporters / traders 
+
+ 11 
+ Provide timeline for making import payments and a maximum extension period 
+ rejected 
+ Regulations simplified; timelines would be as per the contract 
+ - 
+ Importers 
+
+ 12 
+ Relaxation to handle change of ADs for advance payments in exports and imports 
+ accepted 
+ Provided 
+ Regulations 10(1) and 10(2) 
+ Exporters / importers 
+
+ 13 
+ Memorandum of Instructions on Project and Service Exports (PEM) may be retained 
+ rejected 
+ Regulations simplified; prescriptive rules removed for principle-based regulations; ADs can handle transactions as per their internal policy 
+ - 
+ Project / service exporters (EPC ecosystem) 
+
+ 14 
+ Merchanting Trade Transaction: (1) relax same-AD routing for outward and inward remittances; (2) let ADs handle third-party receipt and payment in MTT 
+ accepted 
+ Provided 
+ Regulation 16(1) 
+ Trading houses / merchant exporters 
+
+ 15 
+ ADs requested relaxation up to five working days for entering details in E/IDPMS 
+ accepted 
+ Provided 
+ Regulation 18(1) 
+ AD banks — the only commenter class RBI names 
+
+ 16 
+ Specific instructions / enabler may be provided on reduction in import value 
+ accepted 
+ Provided 
+ Regulation 18(1)(k) 
+ Importers 
+ Watchpoints — the accountability angles Comments are summarized; commenters are anonymous: The annex records each ask and the RBI response without names or counts — “ADs had requested” is the only attribution in the whole document. Commenter identities are extractable by RTI; a comments-disclosure template exists on the Access & RTI page. Operational rules moved to bank “internal policy”: The Project & Service Exports memorandum (PEM) was retired in favour of ADs' internal policies. The rules freelancers actually face day-to-day are now unpublished, bank-by-bank documents — rule-making delegated to the layer with no consultation obligation. No de minimis floor for service exports: US customs exempts exports under $2,500 from Electronic Export Information filing. Here, monthly consolidation was accepted, but no value floor: a $5 invoice carries the same legal weight as a $5m contract. The design choice — not the statute — is what lands on micro service exporters. Enforcement asymmetry: Non-filing is a FEMA contravention (s.13, penalty up to 3× the sum involved) and banks hold proceeds until the EDPMS match. The burden lands hardest on the smallest invoices — the exact population the EDF waiver previously shielded. Reading the pattern: organized, banked interests won timing
+and discretion concessions — a five-working-day window for banks, routing relief for trading houses,
+change-of-AD clean-ups. The largest-by-headcount unorganized class — micro service exporters, freelancers,
+remote-task earners — lost the substantive ask (EDF exemption) and received procedural softeners instead:
+monthly consolidation and a ₹10 lakh simplified closure threshold. Both facts sit in the same RBI annex;
+the ledger makes the trade visible. ← Back to the consultation ledger

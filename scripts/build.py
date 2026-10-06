@@ -229,7 +229,7 @@ commenters had to self-publish. A rule made in a closed room still lands on your
     return body
 
 
-def build_consultations(regs, consults):
+def build_consultations(regs, consults, fb_ids=frozenset()):
     reg_names = {r["id"].upper(): r["name"] for r in regs}
     counts = Counter(c["regulator"] for c in consults)
     body = """<section class="hero slim"><div class="wrap">
@@ -258,10 +258,14 @@ published?</strong></p>
     for c in sorted(consults, key=lambda c: (c["opened"] or ""), reverse=True):
         pub = (c["comments_published"] or "").strip().lower()
         pcls = "pub-yes" if pub == "yes" else ("pub-no" if pub == "no" else "pub-unknown")
+        if c["id"] in fb_ids:
+            title_html = f'<a href="/consultation-{esc(c["id"])}.html">{esc(c["title"])}</a>'
+        else:
+            title_html = f'<a href="{esc(c["url"])}">{esc(c["title"])}</a>'
         body += f"""<tr data-status="{esc((c["status"] or "").lower())}" data-pub="{pcls}">
 <td>{esc(fmt_date(c["opened"]))}</td>
 <td>{esc(fmt_date(c["closed"]))}</td>
-<td><a href="{esc(c["url"])}">{esc(c["title"])}</a>{f'<div class="small muted">{esc(c["outcome_note"])}</div>' if c["outcome_note"] else ''}</td>
+<td>{title_html}{f'<div class="small muted">{esc(c["outcome_note"])}</div>' if c["outcome_note"] else ''}</td>
 <td><span class="pill small">{esc(c["regulator"].upper())}</span></td>
 <td>{esc(c["status"])}</td>
 <td>{stance_pill(c["comments_published"])} <a class="linkcell" href="{esc(c["source_url"])}">source</a></td>
@@ -271,6 +275,125 @@ published?</strong></p>
 "unknown" is a finding, not a gap in this register — it means the regulator has not
 demonstrated a practice of publishing what it receives. RTI is the fallback route;
 see <a href="/access.html">Access &amp; RTI</a> for ready-to-file templates.</p></div>
+</div>"""
+    return body
+
+
+
+def outcome_pill(v):
+    v = (v or "").strip().lower()
+    if v == "accepted":
+        return '<span class="badge" style="--c:#166534">accepted</span>'
+    if v == "not_accepted":
+        return '<span class="badge" style="--c:#b91c1c">rejected</span>'
+    if v == "omitted":
+        return '<span class="badge" style="--c:#92400e">clause omitted</span>'
+    return esc(v)
+
+
+TIMELINES = {
+    "rbi-exim-fema-2026": [
+        ("2024-07-02", "Draft Regulations and Draft Directions published; comments invited by email until 2024-09-01."),
+        ("2025-04-04", "Revised draft Regulations and Directions issued; comment window until 2025-04-30."),
+        ("2026-01-13", "Final Regulations notified in the Gazette of India (FEMA 23(R)/2026-RB)."),
+        ("2026-01-16", "Directions issued; Press Release 1933 carries a 'Statement on feedback received' annex — a first for this desk."),
+        ("2026-10-01", "Regulations and Directions in force. The 2015 Regulations, both master directions and 167 circulars are superseded."),
+    ],
+}
+
+CASE_WATCHPOINTS = {
+    "rbi-exim-fema-2026": [
+        ("Comments are summarized; commenters are anonymous",
+         "The annex records each ask and the RBI response without names or counts — \u201cADs had requested\u201d is the "
+         "only attribution in the whole document. Commenter identities are extractable by RTI; a comments-disclosure "
+         "template exists on the <a href=\"/access.html\">Access &amp; RTI</a> page."),
+        ("Operational rules moved to bank \u201cinternal policy\u201d",
+         "The Project &amp; Service Exports memorandum (PEM) was retired in favour of ADs' internal policies. The rules "
+         "freelancers actually face day-to-day are now unpublished, bank-by-bank documents \u2014 rule-making delegated "
+         "to the layer with no consultation obligation."),
+        ("No de minimis floor for service exports",
+         "US customs exempts exports under $2,500 from Electronic Export Information filing. Here, monthly "
+         "consolidation was accepted, but no value floor: a $5 invoice carries the same legal weight as a $5m "
+         "contract. The design choice \u2014 not the statute \u2014 is what lands on micro service exporters."),
+        ("Enforcement asymmetry",
+         "Non-filing is a FEMA contravention (s.13, penalty up to 3\u00d7 the sum involved) and banks hold proceeds "
+         "until the EDPMS match. The burden lands hardest on the smallest invoices \u2014 the exact population the EDF "
+         "waiver previously shielded."),
+    ],
+}
+
+CASE_LEDES = {
+    "rbi-exim-fema-2026": "RBI replaced the 2015 Regulations, two master directions and 167 circulars with one "
+    "principle-based rule for everything crossing the border \u2014 goods, services, software. Unusually "
+    "consultative by this desk's standards: two draft rounds, and a published summary of who asked for what. "
+    "This case file reads the ledger of asks \u2014 who got their timing concessions, and who lost the substantive ask.",
+}
+
+CASE_TITLES = {
+    "rbi-exim-fema-2026": "Case file: Export &amp; Import of Goods and Services Regulations, 2026",
+}
+
+CASE_DESCS = {
+    "rbi-exim-fema-2026": "Consultation anatomy of RBI's FEMA Export &amp; Import Regulations 2026: two draft rounds, "
+    "a published feedback annex, and a scorecard of who won and who lost \u2014 timing concessions for AD banks, "
+    "an anonymous ledger for everyone else.",
+}
+
+
+def build_consultation_detail(consult, fb):
+    cid = consult["id"]
+    acc = sum(1 for r in fb if (r["outcome"] or "").strip().lower() == "accepted")
+    rej = sum(1 for r in fb if (r["outcome"] or "").strip().lower() == "not_accepted")
+    body = f"""<section class="hero slim"><div class="wrap">
+<p class="kicker">case file \u00b7 consultation anatomy</p>
+<h1>{esc(consult["title"])}</h1>
+<p class="lede">{esc(CASE_LEDES.get(cid, ""))}</p>
+</div></section><div class="wrap">"""
+    body += '<div class="factbar">'
+    body += f'<div><span>window</span><strong>{esc(fmt_date(consult["opened"]))} \u2192 {esc(fmt_date(consult["closed"]))}</strong></div>'
+    body += f'<div><span>status</span><strong>{esc(consult["status"])}</strong></div>'
+    body += f'<div><span>feedback items</span><strong>{len(fb)}</strong></div>'
+    body += f'<div><span>accepted</span><strong>{acc}</strong></div>'
+    body += f'<div><span>rejected</span><strong>{rej}</strong></div>'
+    body += f'<div><span>comments published?</span><strong>{esc(consult["comments_published"])}</strong></div>'
+    body += "</div>"
+    body += """<div class="callout"><p><strong>What changed on the ground, from 1 October 2026:</strong> one Export
+Declaration Form for goods, services and software (SOFTEX folded in); service exporters file one consolidated
+EDF a month, due within 30 days of month-end, no minimum invoice value; banks credit only after the EDPMS
+match; proceeds due within nine months (12 if invoiced in rupees); non-filing is a FEMA contravention under
+s.13 (penalty up to 3\u00d7 the sum involved).</p></div>"""
+    body += """<h2 id="timeline">The consultation timeline</h2>
+<table class="listing"><thead><tr><th>Date</th><th>What happened</th></tr></thead><tbody>"""
+    for d, ev in TIMELINES.get(cid, []):
+        body += f"<tr><td>{esc(fmt_date(d))}</td><td>{ev}</td></tr>"
+    body += "</tbody></table>"
+    body += """<h2 id="scorecard">The feedback scorecard \u2014 who asked, who won</h2>
+<p>Reproduced from RBI's <a href="https://rbidocs.rbi.org.in/rdocs/content/pdfs/PR193316012026_A.pdf">Statement
+on feedback received</a> (annex to Press Release 1933; archived copy in the repo's
+<code>notes/evidence/</code> \u2014 the live rbidocs host is CAPTCHA-walled for bots). The <em>commenter class</em>
+column is our inference from the annex wording; RBI names no commenters \u2014 <strong>AD banks are the only class
+the annex identifies</strong> ("ADs had requested").</p>
+<table class="listing"><thead><tr><th>#</th><th>The ask (annex wording)</th><th>Outcome</th><th>RBI response</th><th>Where it landed</th><th>Commenter class (inferred)</th></tr></thead><tbody>"""
+    for r in sorted(fb, key=lambda r: int(r["seq"] or 0)):
+        body += f"""<tr>
+<td>{esc(r["seq"])}</td>
+<td>{esc(r["feedback"])}</td>
+<td>{outcome_pill(r["outcome"])}</td>
+<td>{esc(r["response"])}</td>
+<td>{esc(r["regulation"]) or '\u2014'}</td>
+<td>{esc(r["commenter_class"])}</td>
+</tr>"""
+    body += "</tbody></table>"
+    body += """<h2 id="watchpoints">Watchpoints \u2014 the accountability angles</h2>"""
+    for title, text in CASE_WATCHPOINTS.get(cid, []):
+        body += f'<div class="callout"><p><strong>{title}:</strong> {text}</p></div>'
+    body += """<div class="callout"><p><strong>Reading the pattern:</strong> organized, banked interests won timing
+and discretion concessions \u2014 a five-working-day window for banks, routing relief for trading houses,
+change-of-AD clean-ups. The largest-by-headcount unorganized class \u2014 micro service exporters, freelancers,
+remote-task earners \u2014 lost the substantive ask (EDF exemption) and received procedural softeners instead:
+monthly consolidation and a \u20b910 lakh simplified closure threshold. Both facts sit in the same RBI annex;
+the ledger makes the trade visible.</p></div>"""
+    body += """<p><a class="btn" href="/consultations.html">\u2190 Back to the consultation ledger</a></p>
 </div>"""
     return body
 
@@ -459,7 +582,7 @@ HTML is generated from the CSVs. Data licensed <strong>CC BY 4.0</strong> (attri
     return body
 
 
-def write_duckdb(regs, consults, interests, doors, rti_rows):
+def write_duckdb(regs, consults, interests, doors, rti_rows, feedback):
     import duckdb
     out = DATA / "lobbywatch.duckdb"
     if out.exists():
@@ -468,6 +591,7 @@ def write_duckdb(regs, consults, interests, doors, rti_rows):
     for table, rows in (
         ("regulators", regs), ("consultations", consults), ("interests", interests),
         ("doors", doors), ("rti_log", rti_rows),
+        ("consultation_feedback", feedback),
     ):
         if not rows:
             continue
@@ -500,6 +624,11 @@ def strip_html(h):
 def write_agent_files(pages, stats):
     import json as _json, re as _re
     built = time.strftime("%Y-%m-%d %H:%M UTC")
+    case_lines = "\n".join(
+        f"- [Case file]({BASE}/{fname}): per-consultation anatomy — timeline, feedback scorecard, watchpoints."
+        for fname, _ in pages if fname.startswith("consultation-"))
+    if case_lines:
+        case_lines = "\n" + case_lines
     llms = f"""# LobbyWatch — the rule-buyers of Indian finance, watched
 
 > Independent register of the interests that buy influence over India's financial rules:
@@ -514,7 +643,7 @@ Base URL: {BASE}
 
 ## Pages
 - [Home]({BASE}/index.html): comment-transparency scorecard per desk, live consultations, latest door moves.
-- [Consultations]({BASE}/consultations.html): the consultation ledger — opened, closed, status, and whether comments were published.
+- [Consultations]({BASE}/consultations.html): the consultation ledger — opened, closed, status, and whether comments were published.{case_lines}
 - [Interests]({BASE}/interests.html): the interests register — industry bodies, foreign lobbies, think tanks, consumer side, SROTrac layer links.
 - [Revolving Doors]({BASE}/doors.html): documented post-regulator appointments, per person, each with a record link.
 - [Access & RTI]({BASE}/access.html): ready-to-file RTI templates for unpublished comments and committee minutes + the filing log.
@@ -574,9 +703,10 @@ Built {built}.
     interests_csv = list(csv.DictReader(open(ROOT / "data" / "interests.csv", encoding="utf-8")))
     doors_csv = list(csv.DictReader(open(ROOT / "data" / "doors.csv", encoding="utf-8")))
     rti_csv = list(csv.DictReader(open(ROOT / "data" / "rti_log.csv", encoding="utf-8")))
+    feedback_csv = list(csv.DictReader(open(ROOT / "data" / "consultation_feedback.csv", encoding="utf-8")))
     (ROOT / "lobbywatch.json").write_text(_json.dumps(dict(
         meta, regulators=regs_csv, consultations=consults_csv, interests=interests_csv,
-        doors=doors_csv, rti_log=rti_csv), ensure_ascii=False), encoding="utf-8")
+        doors=doors_csv, rti_log=rti_csv, consultation_feedback=feedback_csv), ensure_ascii=False), encoding="utf-8")
     print("wrote search-index.json + lobbywatch.json")
     (ROOT / "robots.txt").write_text(
         "User-agent: *\nAllow: /\n\n"
@@ -636,13 +766,15 @@ HOME_LD = ('<script type="application/ld+json">' + json.dumps({
 def main():
     regs = read_csv("regulators.csv")
     consults = read_csv("consultations.csv")
+    feedback = read_csv("consultation_feedback.csv")
+    fb_ids = {r["consultation_id"] for r in feedback}
     interests = read_csv("interests.csv")
     doors = read_csv("doors.csv")
     rti_rows = read_csv("rti_log.csv")
 
     pages = [
         ("index.html", build_home(regs, consults, interests, doors)),
-        ("consultations.html", build_consultations(regs, consults)),
+        ("consultations.html", build_consultations(regs, consults, fb_ids)),
         ("interests.html", build_interests(interests)),
         ("doors.html", build_doors(doors)),
         ("access.html", build_access(rti_rows)),
@@ -650,8 +782,18 @@ def main():
         ("404.html", FORTY),
         ("search.html", build_search_page()),
     ]
+    case_titles, case_descs = {}, {}
+    for cid in sorted(fb_ids):
+        consult = next((c for c in consults if c["id"] == cid), None)
+        if consult is None:
+            continue
+        fname = f"consultation-{cid}.html"
+        pages.append((fname, build_consultation_detail(
+            consult, [r for r in feedback if r["consultation_id"] == cid])))
+        case_titles[fname] = CASE_TITLES.get(cid, f"Case file: {cid}")
+        case_descs[fname] = CASE_DESCS.get(cid)
     for fname, body in pages:
-        title = {
+        titles = {
             "index.html": "Home",
             "consultations.html": "Consultations",
             "interests.html": "Interests",
@@ -660,17 +802,20 @@ def main():
             "about.html": "About",
             "search.html": "Search",
             "404.html": "About",
-        }[fname]
+        }
+        titles.update(case_titles)
+        title = titles[fname]
         extra = HOME_LD if fname == "index.html" else ""
         (ROOT / fname).write_text(
-            page(title, fname, body, extra_head=extra), encoding="utf-8")
+            page(title, fname, body, desc=case_descs.get(fname), extra_head=extra),
+            encoding="utf-8")
 
     write_agent_files(pages, {
         "regs": len(regs), "consults": len(consults),
         "interests": len(interests), "doors": len(doors),
     })
     write_og()
-    db = write_duckdb(regs, consults, interests, doors, rti_rows)
+    db = write_duckdb(regs, consults, interests, doors, rti_rows, feedback)
     print(f"built {len(pages)} pages -> {BASE}")
     print(f"duckdb: {db}")
     print(f"consultations={len(consults)} interests={len(interests)} doors={len(doors)} built {time.strftime('%Y-%m-%d %H:%M UTC')}")
