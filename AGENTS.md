@@ -38,7 +38,7 @@ Shared gazette/ledger skin of the sousveillance stack (paper #ededf0, seal blue 
 2. **Comments corpus**: download published comments (SEBI/IBBI portals); file the RTI templates in `content/rti-templates/` for the rest, log in `rti_log.csv`.
 3. **Diff engine**: draft clause → final clause → which commenter's language appears (L0–L5 claim discipline; a match is language-similarity evidence, not proof of causation — say so on the page).
 4. **Door ledger expansion**: monthly sweep of PSU board appointments (PIB), exchange/MII filings, SRO governing-council changes (cross-check SROTrac).
-5. **Per-consultation pages**: timeline of access + transparency scorecard per regulator (the index scorecard is the seed).
+5. **Per-consultation pages** (STARTED 2026-10-06, case file #1): `data/consultation_feedback.csv` (consultation_id, seq, feedback, outcome accepted/not_accepted/omitted, response, regulation, commenter_class, inferred) → `build_consultation_detail()` in build.py renders `consultation-<id>.html`; ledger rows link to it when the id has feedback rows. Per-case narrative lives in `TIMELINES` / `CASE_WATCHPOINTS` / `CASE_LEDES` / `CASE_TITLES` / `CASE_DESCS` dicts in build.py. First instance: RBI EXIM FEMA 2026 (https://lobbywatch.cashlessconsumer.in/consultation-rbi-exim-fema-2026.html) — RBI's first published feedback annex on this desk; `comments_published=partial` (responses summarized, commenter identities withheld; annex archived at `notes/evidence/2026-10-06-rbi-exim-fema-2026-feedback-annex.pdf` — live rbidocs CAPTCHA-walls bots, use the repo copy or Wayback).
 
 ## Sibling-sync contract
 
