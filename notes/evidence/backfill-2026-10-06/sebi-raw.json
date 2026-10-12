@@ -1,0 +1,100 @@
+The listing works — 25 recent papers. Now I'll fetch each of the top 12 paper pages to verify titles, comment deadlines, and any published comments.All 12 detail pages have only the paper PDF — no comments attached yet. Let me verify the mechanism by checking an older paper (where comments should be published), and extract comment deadlines from the 12 PDFs.The search index confirms deadlines live inside the paper PDFs. Now I'll pull all 12 paper pages, grab their PDF URLs, download, and extract comment deadlines.```json
+[
+  {
+    "title": "Consultation Paper on Measures to Strengthen Business Continuity Plan (BCP) and Disaster Recovery (DR) of Market Infrastructure Institutions (MIIs)",
+    "opened": "2026-09-15",
+    "closed": "2026-10-05",
+    "url": "https://www.sebi.gov.in/reports-and-statistics/reports/sep-2026/consultation-paper-on-measures-to-strengthen-business-continuity-plan-bcp-and-disaster-recovery-dr-of-market-infrastructure-institutions-miis-_104492.html",
+    "comments_published": "unknown",
+    "basis": "Listed under 'Reports for Public Comments' dated Sep 15, 2026; PDF says comments 'should be submitted latest by October 05, 2026'; paper page carries only the paper PDF (no comments attached) and the publiccommentv2 portal is submission-only, so no published stakeholder comments seen"
+  },
+  {
+    "title": "Consultation paper on “Review of certain aspects of the Closing Auction Session, Market Timings and Settlement Methodologies for Derivative Contracts”",
+    "opened": "2026-09-12",
+    "closed": "2026-10-03",
+    "url": "https://www.sebi.gov.in/reports-and-statistics/reports/sep-2026/consultation-paper-on-review-of-certain-aspects-of-the-closing-auction-session-market-timings-and-settlement-methodologies-for-derivative-contracts-_104464.html",
+    "comments_published": "unknown",
+    "basis": "Listing row dated Sep 12, 2026; PDF says comments 'should be submitted latest by October 3, 2026'; paper page shows only the paper PDF, no comments published"
+  },
+  {
+    "title": "Consultation Paper on Applicability of IT and Cyber Security Framework of MIIs to their Subsidiaries",
+    "opened": "2026-09-11",
+    "closed": "2026-10-02",
+    "url": "https://www.sebi.gov.in/reports-and-statistics/reports/sep-2026/consultation-paper-on-applicability-of-it-and-cyber-security-framework-of-miis-to-their-subsidiaries_104433.html",
+    "comments_published": "unknown",
+    "basis": "Listing row dated Sep 11, 2026; PDF says comments 'should be submitted not later than October 2, 2026'; paper page shows only the paper PDF, no comments published"
+  },
+  {
+    "title": "Consultation Paper on Strengthening Governance of MIIs",
+    "opened": "2026-09-09",
+    "closed": "2026-09-30",
+    "url": "https://www.sebi.gov.in/reports-and-statistics/reports/sep-2026/consultation-paper-on-strengthening-governance-of-miis_104385.html",
+    "comments_published": "unknown",
+    "basis": "Listing row dated Sep 9, 2026; PDF says comments 'should be submitted latest by September 30, 2026'; paper page shows only the paper PDF, no comments published"
+  },
+  {
+    "title": "Consultation Paper on proposal to permit net settlement of funds for transactions undertaken by mutual fund schemes in cash market",
+    "opened": "2026-09-03",
+    "closed": "2026-09-24",
+    "url": "https://www.sebi.gov.in/reports-and-statistics/reports/sep-2026/consultation-paper-on-proposal-to-permit-net-settlement-of-funds-for-transactions-undertaken-by-mutual-fund-schemes-in-cash-market_104231.html",
+    "comments_published": "unknown",
+    "basis": "Listing row dated Sep 3, 2026 matching PDF 'Issued on: September 03, 2026'; PDF says comments 'should be submitted latest by September 24, 2026'; paper page shows only the paper PDF, no comments published"
+  },
+  {
+    "title": "Consultation paper on Exemption from the requirement of mandatory merchant banker appointment for Small-value debt through private placement by certain listed issuers",
+    "opened": "2026-08-27",
+    "closed": "2026-09-17",
+    "url": "https://www.sebi.gov.in/reports-and-statistics/reports/aug-2026/consultation-paper-on-exemption-from-the-requirement-of-mandatory-merchant-banker-appointment-for-small-value-debt-through-private-placement-by-certain-listed-issuers_104040.html",
+    "comments_published": "unknown",
+    "basis": "Listing row dated Aug 27, 2026; PDF says comments 'should be submitted latest by September 17, 2026'; paper page shows only the paper PDF, no comments published"
+  },
+  {
+    "title": "Consultation paper on revision of Advertisement Code for Online Bond Platform Providers (OBPPs)",
+    "opened": "2026-08-21",
+    "closed": "2026-09-11",
+    "url": "https://www.sebi.gov.in/reports-and-statistics/reports/aug-2026/consultation-paper-on-revision-of-advertisement-code-for-online-bond-platform-providers-obpps-_103863.html",
+    "comments_published": "unknown",
+    "basis": "Listing row dated Aug 21, 2026; PDF timeline says 'Comments on the Consultation paper may be sent by September 11, 2026'; paper page shows only the paper PDF, no comments published"
+  },
+  {
+    "title": "Consultation Paper on Introduction of Fixed Income Channel Partners (FICPs) for Distribution of Fixed Income Securities through Online Bond Platform Providers (OBPPs)",
+    "opened": "2026-08-21",
+    "closed": "2026-09-11",
+    "url": "https://www.sebi.gov.in/reports-and-statistics/reports/aug-2026/consultation-paper-on-introduction-of-fixed-income-channel-partners-ficps-for-distribution-of-fixed-income-securities-through-online-bond-platform-providers-obpps-_103859.html",
+    "comments_published": "unknown",
+    "basis": "Listing row dated Aug 21, 2026; PDF timeline says 'Comments on the Consultation paper may be sent by September 11, 2026'; paper page shows only the paper PDF, no comments published"
+  },
+  {
+    "title": "Consultation Paper on Review of SEBI (Settlement Proceedings) Regulations, 2018",
+    "opened": "2026-08-14",
+    "closed": "2026-09-04",
+    "url": "https://www.sebi.gov.in/reports-and-statistics/reports/aug-2026/consultation-paper-on-review-of-sebi-settlement-proceedings-regulations-2018_103654.html",
+    "comments_published": "unknown",
+    "basis": "Listing row dated Aug 14, 2026; PDF says comments 'should be submitted on or before September 04, 2026'; paper page shows only the paper PDF, no comments published"
+  },
+  {
+    "title": "Consultation Paper on Review of Know Your Client process for individual Persons Resident Outside India",
+    "opened": "2026-08-14",
+    "closed": "2026-09-04",
+    "url": "https://www.sebi.gov.in/reports-and-statistics/reports/aug-2026/consultation-paper-on-review-of-know-your-client-process-for-individual-persons-resident-outside-india_103653.html",
+    "comments_published": "unknown",
+    "basis": "Listing row dated Aug 14, 2026; PDF says comments 'should be submitted on or before September 04, 2026'; paper page shows only the paper PDF, no comments published"
+  },
+  {
+    "title": "Consultation paper on the mandatory adoption of a Credit Risk-o-Meter as an additional disclosure mechanism for debt securities",
+    "opened": "2026-08-13",
+    "closed": "2026-09-03",
+    "url": "https://www.sebi.gov.in/reports-and-statistics/reports/aug-2026/consultation-paper-on-the-mandatory-adoption-of-a-credit-risk-o-meter-as-an-additional-disclosure-mechanism-for-debt-securities_103613.html",
+    "comments_published": "unknown",
+    "basis": "Listing row dated Aug 13, 2026; PDF says comments 'should be submitted latest by September 03, 2026'; paper page shows only the paper PDF, no comments published"
+  },
+  {
+    "title": "Consultation Paper on review of Accredited Investor framework",
+    "opened": "2026-08-13",
+    "closed": "2026-09-03",
+    "url": "https://www.sebi.gov.in/reports-and-statistics/reports/aug-2026/consultation-paper-on-review-of-accredited-investor-framework_103550.html",
+    "comments_published": "unknown",
+    "basis": "Listing row dated Aug 13, 2026 with matching press release PR 58/2026 of Aug 13, 2026; PDF says comments 'shall be submitted on or before September 03, 2026'; paper page shows only the paper PDF, no comments published"
+  }
+]
+```

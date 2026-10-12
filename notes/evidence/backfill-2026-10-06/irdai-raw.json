@@ -1,0 +1,98 @@
+The site is reachable from the sandbox. Let me parse the exposure-drafts listing structure.The listing is a Liferay portlet with pagination. Let me fetch a larger page set and find the consultation papers page URL.Full listing parsed — 201 rows. Now let me find the correct consultation-papers page URL (the given one 404'd) and extract per-row document links.Found key pages: `comments-on-exposure-drafts` (where comments get published) and two homepage-featured consultations not seen in the listing. Fetching all three.Now let me extract per-row PDF links from the full listing and download the key PDFs to verify dates and comment deadlines.All PDFs downloaded. Extracting titles, dates, and comment deadlines.Dates confirmed for most. Now the two homepage-featured consultations (PIR + Distribution Reforms) — likely the newest. Downloading their PDFs and checking the full listing for any other "response" statements.Part 1 deadline: 2026-10-25. Now checking Part 2 and hunting open dates via the press release.Distribution Reforms opened 2026-09-23 (press release date in filename). Now pinning down the PIR opened date.PIR opened 01-09-2026 per the homepage listing. Now extracting missing deadlines from the June-2026 batch PDFs.The PIR deadline was extended by a 30-09-2026 press release — fetching the new deadline.Extension confirmed: PIR opened 2026-09-01, deadline extended to 2026-10-17. Verifying remaining titles and the Ind AS dates.All dates verified. Generating the final JSON.[
+  {
+    "title": "Consultation Paper on Insurance Distribution Reforms (Part 1 & Part 2) — 'Reforms for Recalibrating Economics of Insurance Distribution'",
+    "opened": "2026-09-23",
+    "closed": "2026-10-25",
+    "url": "https://irdai.gov.in/web/guest/document-detail?documentId=9852848",
+    "comments_published": "unknown",
+    "basis": "Fetched document-detail page hosting Part 1 + Part 2 PDFs; companion press release dated 23.09.2026 (documentId=9852267); Part 1 Section 18 states 'last date for submission of comments and feedback is 25th October 2026'; consultation still open at 2026-10-06, no response statement seen on irdai.gov.in/comments-on-exposure-drafts"
+  },
+  {
+    "title": "Public Insurance Registry (PIR) — Public Consultation Paper",
+    "opened": "2026-09-01",
+    "closed": "2026-10-17",
+    "url": "https://irdai.gov.in/web/guest/document-detail?documentId=9791744",
+    "comments_published": "unknown",
+    "basis": "Fetched the paper PDF (Section 16: original last date 30th September 2026) and IRDAI press release 30-09-2026 stating the paper was released 1st September 2026 and deadline extended to Saturday 17th October 2026; homepage lists it dated 01-09-2026; still open, no response statement seen"
+  },
+  {
+    "title": "Consultation Paper - Exposure Draft IRDAI (POLICYHOLDERS' EDUCATION AND PROTECTION FUND) REGULATIONS, 2026",
+    "opened": "2026-06-23",
+    "closed": "2026-07-13",
+    "url": "https://irdai.gov.in/documents/37343/9589114/%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%B0%E0%A5%8D%E0%A4%B6+%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0+-+%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A4%AA%E0%A5%8B%E0%A4%9C%E0%A4%B0+%E0%A4%A1%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%AB%E0%A5%8D%E0%A4%9F+%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%80+%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE+%E0%A4%94%E0%A4%B0+%E0%A4%B8%E0%A4%82%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3+%E0%A4%A8%E0%A4%BF%E0%A4%A7%E0%A4%BF%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2026+_+Consultation+Paper+-+Exposure+Draft+IRDAI+%28POLICYHOLDERS%E2%80%99+EDUCATION+AND+PROTECTION+FUND%29+REGULATIONS%2C+2026.pdf/6901418d-db53-2095-599f-f905c6db411e?version=3.0&t=1783664500934&download=true",
+    "comments_published": "partial",
+    "basis": "Paper's own roadmap table: 'Issue Consultation Paper... 23rd June, 2026' and 'Close comment period 13th July, 2026'; 'General statement of response on Exposure draft... Policyholders Education and Protection Fund Regulations, 2026' dated 31-07-2026 seen on irdai.gov.in/comments-on-exposure-drafts"
+  },
+  {
+    "title": "Exposure Draft on the IRDAI (Third Party Administrators - Health Services) (Amendment) Regulations, 2026",
+    "opened": "2026-06-19",
+    "closed": "2026-07-10",
+    "url": "https://irdai.gov.in/documents/37343/365848/%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%85%E0%A4%A8%E0%A5%8D%E0%A4%AF+%E0%A4%AA%E0%A4%95%E0%A5%8D%E0%A4%B7+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A4%95+%E2%80%93+%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF+%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%8F%E0%A4%81%29+%28%E0%A4%B8%E0%A4%82%E0%A4%B6%E0%A5%8B%E0%A4%A7%E0%A4%A8%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2026+%E0%A4%AA%E0%A4%B0+%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A4%AA%E0%A5%8B%E0%A4%9C%E0%A4%BC%E0%A4%B0+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B0%E0%A5%82%E0%A4%AA+_+Exposure+Draft+on+the+IRDAI+%28Third+Party+Administrators+-+Health+Services%29+%28Amendment%29+Regulations%2C+2026.pdf/5219a725-7214-8bd9-8078-e80fa4f06ec8?version=2.0&t=1783083622428&download=true",
+    "comments_published": "partial",
+    "basis": "PDF fetched, dated 19.06.2026; comments 'on or before 10th July, 2026'; 'General Response of IRDAI on feedback of public - Draft IRDAI (TPA - Health Services) (Amendment) Regulations, 2026' dated 31-07-2026 seen on comments-on-exposure-drafts page"
+  },
+  {
+    "title": "Exposure Draft on the IRDAI (Manner and Procedure for Imposing Penalties) Regulations, 2026",
+    "opened": "2026-06-19",
+    "closed": "2026-07-09",
+    "url": "https://irdai.gov.in/documents/37343/9572988/%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%A5%E0%A4%A6%E0%A4%82%E0%A4%A1+%E0%A4%B2%E0%A4%97%E0%A4%BE%E0%A4%A8%E0%A5%87+%E0%A4%95%E0%A5%87+%E0%A4%B2%E0%A4%BF%E0%A4%8F+%E0%A4%AA%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%A4%E0%A4%BF+%E0%A4%94%E0%A4%B0+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A4%BE%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2026+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80+%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A4%AA%E0%A5%8B%E0%A4%9C%E0%A4%BC%E0%A4%B0+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B0%E0%A5%82%E0%A4%AA+_+Exposure+Draft+on+the+IRDAI%28Manner+and+Procedure+for+Imposing+Penalties%29+Regulations%2C+2026.pdf/dc7a3ab7-57f8-08ce-1fc0-0c49687f3759?version=2.0&t=1783071907883&download=true",
+    "comments_published": "partial",
+    "basis": "PDF fetched, dated 19.06.2026; comments 'on or before 9 July, 2026'; 'General Statement of Response to the Public Comments Received on the IRDAI (Manner and Procedure for Imposing Penalties) Regulations, 2026' dated 30-07-2026 seen on comments-on-exposure-drafts page"
+  },
+  {
+    "title": "Consultation Paper - IRDAI (Insurance Intermediaries) (Amendment) Regulations, 2026",
+    "opened": "2026-06-19",
+    "closed": "2026-07-10",
+    "url": "https://irdai.gov.in/documents/37343/9576082/%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%B0%E0%A5%8D%E0%A4%B6+%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0+-+%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%AE%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A5%80%29+%28%E0%A4%B8%E0%A4%82%E0%A4%B6%E0%A5%8B%E0%A4%A7%E0%A4%A8%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2026+_+Consultation+Paper-IRDAI+%28Insurance+Intermediaries%29%28Amendment%29+Regulations%2C2026.pdf/1d9e0dfd-fcfb-ed0d-21aa-15ef39f0406b?version=3.0&t=1783674385581&download=true",
+    "comments_published": "partial",
+    "basis": "PDF fetched; IRDAI exposure-drafts listing dated 19-06-2026; comments 'on or before 10/07/2026'; 'General Statement of response to public comments on IRDAI (Insurance Intermediaries) (Amendment) Regulations, 2026' dated 31-07-2026 seen on comments-on-exposure-drafts page"
+  },
+  {
+    "title": "Consultation Paper - Exposure Draft IRDAI (Registration and Operations of FRBs and Lloyd's India) (Amendment) Regulations, 2024",
+    "opened": "2026-06-19",
+    "closed": "2026-07-10",
+    "url": "https://irdai.gov.in/documents/37343/9575672/%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%B0%E0%A5%8D%E0%A4%B6+%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0+%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A4%AA%E0%A5%8B%E0%A4%9C%E0%A4%B0+%E0%A4%A1%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%AB%E0%A5%8D%E0%A4%9F+%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88%28%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A5%80+%E0%A4%AA%E0%A5%81%E0%A4%A8%E0%A4%B0%E0%A5%8D%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%BE+%E0%A4%B6%E0%A4%BE%E0%A4%96%E0%A4%BE%E0%A4%93%E0%A4%82+%E0%A4%94%E0%A4%B0+%E0%A4%B2%E0%A4%BE%E0%A4%AF%E0%A4%A1%E0%A5%8D%E0%A4%B8+%E0%A4%87%E0%A4%82%E0%A4%A1%E0%A4%BF%E0%A4%AF%E0%A4%BE+%E0%A4%95%E0%A4%BE+%E0%A4%AA%E0%A4%82%E0%A4%9C%E0%A5%80%E0%A4%95%E0%A4%B0%E0%A4%A3+%E0%A4%94%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%9A%E0%A4%BE%E0%A4%B2%E0%A4%A8%29%28%E0%A4%B8%E0%A4%82%E0%A4%B6%E0%A5%8B%E0%A4%A7%E0%A4%A8%29%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2024_+Consultation+Paper-Exposure+Draft+IRDAI%28Registration+and+Operations+of+FRBs+and+Lloyd%E2%80%99s+India%29%28Amendment%29+Regulations%2C+2.pdf/8aaa80ee-8ba2-3645-27a9-99dc490374da?version=2.0&t=1783676411588&download=true",
+    "comments_published": "unknown",
+    "basis": "PDF fetched; opened date from exposure-drafts listing dated 19-06-2026 (no date line inside PDF); comments 'on or before 10th July, 2026' in PDF; no response statement seen on comments-on-exposure-drafts page"
+  },
+  {
+    "title": "Consultation Paper on IRDAI (Actuarial, Finance and Investment Functions of Insurers) (Second Amendment) Regulations 2026",
+    "opened": "2026-06-19",
+    "closed": "2026-07-10",
+    "url": "https://irdai.gov.in/documents/37343/365848/%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%93%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE%E0%A4%82%E0%A4%95%E0%A4%BF%E0%A4%95%2C+%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A5%8D%E0%A4%A4+%E0%A4%94%E0%A4%B0+%E0%A4%A8%E0%A4%BF%E0%A4%B5%E0%A5%87%E0%A4%B6+%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2024+%E0%A4%AE%E0%A5%87%E0%A4%82+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%A4+%E0%A4%B8%E0%A4%82%E0%A4%B6%E0%A5%8B%E0%A4%A7%E0%A4%A8%E0%A5%8B%E0%A4%82+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80+%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%B0%E0%A5%8D%E0%A4%B6-%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0+_+Consultation+Paper+on+IRDAI+%28Actuarial%2C+Finance+and+Investment+Functions+of+Insurers%29+%28Second+Amendment%29+Regulations+2026.pdf/6c4f6f57-b94b-8dfd-91ce-06e1eaf0db17?version=3.0&t=1783670357835&download=true",
+    "comments_published": "partial",
+    "basis": "PDF fetched, dated 19.06.2026; comments 'on or before 10th July, 2026'; 'General statement of response to the public comments on draft IRDAI(Actuarial, Finance and Investment Functions of Insurers)(Second Amendment) Reg. 2026' dated 31-07-2026 seen on comments-on-exposure-drafts page"
+  },
+  {
+    "title": "Exposure Draft on IRDAI (Insurance Surveyors and Loss Assessors) (Third Amendment) Regulations, 2026",
+    "opened": "2026-06-19",
+    "closed": "2026-07-10",
+    "url": "https://irdai.gov.in/documents/37343/9574210/%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%B8%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%95+%E0%A4%94%E0%A4%B0+%E0%A4%B9%E0%A4%BE%E0%A4%A8%E0%A4%BF+%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%95%29+%28%E0%A4%A4%E0%A5%80%E0%A4%B8%E0%A4%B0%E0%A4%BE+%E0%A4%B8%E0%A4%82%E0%A4%B6%E0%A5%8B%E0%A4%A7%E0%A4%A8%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2026+%E0%A4%95%E0%A5%87+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%A4+%E0%A4%B8%E0%A4%82%E0%A4%B6%E0%A5%8B%E0%A4%A7%E0%A4%A8%E0%A5%8B%E0%A4%82+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80+%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A4%AA%E0%A5%8B%E0%A4%9C%E0%A4%BC%E0%A4%B0+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B0%E0%A5%82%E0%A4%AA+_+Exposure+Draft+on+IRDAI+%28Insurance+Surveyors+and+Loss+Assessors%29+%28Third+Amendment%29+Regulations%2C+2026.pdf/5d14daa9-63d0-7e6f-c4a0-74b1a75bb71a?version=2.0&t=1783663501585&download=true",
+    "comments_published": "partial",
+    "basis": "PDF fetched, dated 19.06.2026; comments 'on or before 10th July, 2026'; 'General statement of response to the public comments on Exposure draft of IRDAI (Insurance Surveyors and Loss Assessors) (amendment) Regulations, 2026' dated 31-07-2026 seen on comments-on-exposure-drafts page"
+  },
+  {
+    "title": "Exposure Draft on the IRDAI (Procedure for Making Regulations and Subsidiary Instructions) Regulations, 2026",
+    "opened": "2026-06-17",
+    "closed": "2026-07-08",
+    "url": "https://irdai.gov.in/documents/37343/9563061/%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE+%E0%A4%94%E0%A4%B0+%E0%A4%B8%E0%A4%B9%E0%A4%BE%E0%A4%AF%E0%A4%95+%E0%A4%85%E0%A4%A8%E0%A5%81%E0%A4%A6%E0%A5%87%E0%A4%B6+%E0%A4%AC%E0%A4%A8%E0%A4%BE%E0%A4%A8%E0%A5%87+%E0%A4%95%E0%A5%87+%E0%A4%B2%E0%A4%BF%E0%A4%8F+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A4%BE%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2026+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80+%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A4%AA%E0%A5%8B%E0%A4%9C%E0%A4%BC%E0%A4%B0+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B0%E0%A5%82%E0%A4%AA+_+Exposure+Draft+on+the+IRDAI+%28Procedure+for+Making+Regulations+and+Subsidiary+Instructions%29+Regulations%2C+2026.pdf/38f4a596-e8e9-9081-65b5-48ad312ddf29?version=2.0&t=1781768081653&download=true",
+    "comments_published": "unknown",
+    "basis": "PDF fetched, dated 17.06.2026; comments 'before 8 July, 2026'; no response statement seen on comments-on-exposure-drafts page"
+  },
+  {
+    "title": "Consultation Paper - IRDAI (Registration, Capital Structure, Transfer of Shares and Amalgamation of Insurers) (First Amendment) Regulations, 2026",
+    "opened": "2026-06-15",
+    "closed": "2026-07-06",
+    "url": "https://irdai.gov.in/documents/37343/365848/%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%B0%E0%A5%8D%E0%A4%B6+%E0%A4%A6%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%B5%E0%A5%87%E0%A4%9C%E0%A4%BC-%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88%28%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%93%E0%A4%82+%E0%A4%95%E0%A4%BE+%E0%A4%AA%E0%A4%82%E0%A4%9C%E0%A5%80%E0%A4%95%E0%A4%B0%E0%A4%A3%2C%E0%A4%AA%E0%A5%82%E0%A4%81%E0%A4%9C%E0%A5%80+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%2C%E0%A4%B6%E0%A5%87%E0%A4%AF%E0%A4%B0%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A4%BE+%E0%A4%85%E0%A4%82%E0%A4%A4%E0%A4%B0%E0%A4%A3+%E0%A4%94%E0%A4%B0+%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%AE%E0%A5%87%E0%A4%B2%E0%A4%A8%29+%28%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A5%E0%A4%AE+%E0%A4%B8%E0%A4%82%E0%A4%B6%E0%A5%8B%E0%A4%A7%E0%A4%A8%29%2C%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C2026_Consultation+Paper-IRDAI%28Registration%2CCapital+Structure%2CTransfer+of+Shares+and+Amalgamation+of+Insurers%29%281st+Amendment%29Regulations%2C.pdf/e3964c59-92e6-c45d-9188-47fa3124364d?version=2.0&t=1781690289389&download=true",
+    "comments_published": "partial",
+    "basis": "PDF fetched, dated 15.06.2026; comments 'before 6th July, 2026'; 'General statement of response to the public comments on IRDAI (Registration, Capital Structure, Transfer of Shares and Amalgamation of Insurers) (First Amendment) Regulations, 2026' dated 31-07-2026 seen on comments-on-exposure-drafts page"
+  },
+  {
+    "title": "Exposure draft on Ind AS Implementation",
+    "opened": "2026-03-03",
+    "closed": "2026-03-24",
+    "url": "https://irdai.gov.in/documents/37343/365848/%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A5%80%E0%A4%AF+%E0%A4%B2%E0%A5%87%E0%A4%96%E0%A4%BE%E0%A4%82%E0%A4%95%E0%A4%A8+%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A5%8B%E0%A4%82+%28%E0%A4%87%E0%A4%82%E0%A4%A1+%E0%A4%8F%E0%A4%8F%E0%A4%B8%29+%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80+%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A4%AA%E0%A5%8B%E0%A4%9C%E0%A4%BC%E0%A4%B0+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B0%E0%A5%82%E0%A4%AA+_+Exposure+draft+on+Ind+AS+Implementation.pdf/79d1c148-2bca-c295-2699-1691c9bda71b?version=2.0&t=1772791277452&download=true",
+    "comments_published": "unknown",
+    "basis": "PDF fetched, Ref No 100/2/IFRS-Mission Mode/2026/Vol 3 dated 03rd March, 2026; feedback 'on or before 24/03/2026' to ifrs-team@irdai.gov.in; no response statement seen on comments-on-exposure-drafts page"
+  }
+]

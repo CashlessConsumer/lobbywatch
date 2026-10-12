@@ -1,0 +1,98 @@
+Direct fetch hit an error page. Trying the browser tools first.That path doesn't exist. Let me find the correct consultation section on ibbi.gov.in.Found two key sections: `/public-comments/comments-on` and `/webfront/discussion_paper/invitation_public/`. Fetching both.This is the master disclosure table. Extracting all rows with their links.The master table lists all discussion papers. Links are behind `javascript:void(0)` — let me extract the raw HTML to find the real hrefs (likely in data attributes or modals).PDF links are in `onclick` attributes. Extracting all rows with both discussion paper and comments-of-the-board URLs.Column mapping is off. Let me redo the extraction carefully.Newer rows have 5 cells (Sl.No | Date | Title | DP | Comments). Re-extracting with both structures.Clean master list extracted. The 12 newest span 12 Sep 2026 → 15 Apr 2026 (nine same-day papers). Now I need: (1) check if IBBI publishes raw stakeholder comments anywhere, (2) comment deadlines inside each PDF. Checking the public-comments section and downloading the 12 PDFs.No raw-comments page — the master table's "Comments of the Board" column is the disclosure mechanism, and it's empty for all 12 newest papers. Now downloading the 12 PDFs to extract comment deadlines.Titles confirmed. Deadlines must be in the closing section — searching full text for comment-window phrasing.Found the pattern: "last date for submission of comments is X". Extracting for all 12.Deadlines extracted. Now checking whether IBBI published stakeholder comments or board responses for these 12 — probing the webfront archive pagination.Webfront archive is dead; the master table is the disclosure source. The "Comments of the Board" column (IBBI's summarized response) is empty for all 12 newest rows. Verifying PDF titles match table titles and all 12 URLs return 200.Parser grabbed the wrong table (page has 52 tables). Redoing with the correct table selection.Two tables on the page matched. Targeting the table containing the 12 Sep 2026 row explicitly.Something's inconsistent — the file contains the anchor but my row parse starts at Feb 2025. Inspecting the table's row sequence directly.Row structure has an extra Sl.No. column — cells shifted. Parsing per-row by content, not position.The live table changed since the earlier pass — now 7 papers on 15 Apr 2026, and rows for 16 Feb 2026 and 19 Nov 2025 enter the top 12. Checking where the Grievance/Inspection papers sit now, and whether the current table still has them.Live page differs from cache (100 link occurrences). Re-parsing the live copy and taking the current top 12.Live table confirmed identical in content. Verifying disk PDF covers vs current rows 4,5,6,8, then downloading the three PDFs not yet on disk (rows 8, 10, 11).The live table DOES have the Grievance and Inspection rows — my parser missed them. Inspecting those rows' raw HTML.Parser bug: filenames contain `()` which broke my capture. Re-parsing with a fixed pattern.All 12 rows confirmed against the live table. Final check: HTTP status of all 12 PDF URLs.[
+  {
+    "title": "Discussion Paper on strengthening safeguards in the Insolvency Resolution Process for Personal Guarantors to Corporate Debtors",
+    "opened": "2026-09-12",
+    "closed": "2026-10-03",
+    "url": "https://ibbi.gov.in/uploads/public_comments/DiscussionPaper-120926.pdf",
+    "comments_published": "unknown",
+    "basis": "Fetched IBBI Comments-on-Comments page (reg 4(3) disclosure) 2026-10-06; row dated 12 September 2026 links this PDF; PDF states 'The last date for submission of comments is 3rd October, 2026'; 'Comments of the Board' cell empty."
+  },
+  {
+    "title": "Discussion Paper on strengthening the Regulatory Framework - Amendments to CIRP Regulations, Liquidation Regulations and PG to CD Regulations",
+    "opened": "2026-07-02",
+    "closed": "2026-07-22",
+    "url": "https://ibbi.gov.in/uploads/public_comments/Discussion%20Paper%20-%20020726.pdf",
+    "comments_published": "unknown",
+    "basis": "Comments-on-Comments table row dated 02nd July 2026; PDF fetched and states last date for submission of comments is 22nd July 2026; Comments-of-the-Board cell empty."
+  },
+  {
+    "title": "Discussion Paper on Strengthening resolution outcomes in real estate insolvency",
+    "opened": "2026-06-30",
+    "closed": "2026-07-21",
+    "url": "https://ibbi.gov.in/uploads/public_comments/Discussion%20Paper%20Real%20Estate%20Proposals%20-%2029062026.pdf",
+    "comments_published": "unknown",
+    "basis": "Comments-on-Comments table row dated 30th June 2026; PDF fetched and states last date for submission of comments is 21st July 2026; Comments-of-the-Board cell empty."
+  },
+  {
+    "title": "Discussion Paper on (Creditor-Initiated Insolvency Resolution Process) Regulations, 2026",
+    "opened": "2026-04-15",
+    "closed": "2026-04-28",
+    "url": "https://ibbi.gov.in/uploads/public_comments/Final%20CIIRP%20Upload_15-04-2026.pdf",
+    "comments_published": "unknown",
+    "basis": "Comments-on-Comments table row dated 15th April 2026; PDF cover dated 15 April 2026 states last date for comments 28th April 2026; Comments-of-the-Board cell empty."
+  },
+  {
+    "title": "Discussion paper – Amendments to Liquidation Regulations 2016",
+    "opened": "2026-04-15",
+    "closed": "2026-04-28",
+    "url": "https://ibbi.gov.in/uploads/public_comments/Approved%20-Annex%20C%20-%20DP%20-%20Liq%20150426.pdf",
+    "comments_published": "unknown",
+    "basis": "Comments-on-Comments table row dated 15th April 2026; PDF (proposed amendments to Liquidation Process Regulations) states last date for comments 28th April 2026; Comments-of-the-Board cell empty."
+  },
+  {
+    "title": "Discussion paper – Amendments to Voluntary Liquidation Regulations",
+    "opened": "2026-04-15",
+    "closed": "2026-04-28",
+    "url": "https://ibbi.gov.in/uploads/public_comments/Rev-DP%20Vol%20Liq.pdf",
+    "comments_published": "unknown",
+    "basis": "Comments-on-Comments table row dated 15th April 2026; PDF fetched, states last date for submission of comments 28th April 2026; Comments-of-the-Board cell empty."
+  },
+  {
+    "title": "Discussion paper – Amendments to PG to CD Regulations",
+    "opened": "2026-04-15",
+    "closed": "2026-04-28",
+    "url": "https://ibbi.gov.in/uploads/public_comments/Discussion%20Paper-%20PG%20to%20CD%2015042026.pdf",
+    "comments_published": "unknown",
+    "basis": "Comments-on-Comments table row dated 15th April 2026; PDF on IBC PG-to-CD process amendments states last date for comments 28th April 2026; Comments-of-the-Board cell empty."
+  },
+  {
+    "title": "Discussion paper – Amendments to PPIRP Regulations 2016",
+    "opened": "2026-04-15",
+    "closed": "2026-04-28",
+    "url": "https://ibbi.gov.in/uploads/public_comments/Annex%20B%20-%20DP%20-%20PPIRP%20-%20150426.pdf",
+    "comments_published": "unknown",
+    "basis": "Comments-on-Comments table row dated 15th April 2026; PDF cover (amendments to PPIRP Regulations 2021, dated 15 April 2026) states last date for comments 28th April 2026; Comments-of-the-Board cell empty."
+  },
+  {
+    "title": "Discussion paper – Amendments to CIRP Regulations 2016",
+    "opened": "2026-04-15",
+    "closed": "2026-04-28",
+    "url": "https://ibbi.gov.in/uploads/public_comments/Annex%20A%20-%20DP%20-%20CIRP%20-%20150426.pdf",
+    "comments_published": "unknown",
+    "basis": "Comments-on-Comments table row dated 15th April 2026; PDF (amendments to CIRP Regulations, cover dated 15 April 2026) states last date for comments 28th April 2026; Comments-of-the-Board cell empty."
+  },
+  {
+    "title": "Discussion paper – Grievance & Complaint handling procedure - April 2026",
+    "opened": "2026-04-15",
+    "closed": "2026-04-28",
+    "url": "https://ibbi.gov.in/uploads/public_comments/DP%20-%20IBBI%20%28GRIEVANCE%20AND%20COMPLAINT%20HANDLING%20PROCEDURE%29%20REGULATIONS%202017.pdf",
+    "comments_published": "unknown",
+    "basis": "Comments-on-Comments table row dated 15th April 2026; PDF on amendments to Grievance and Complaint Handling Procedure Regulations 2017 states last date for comments 28th April 2026; Comments-of-the-Board cell empty."
+  },
+  {
+    "title": "Discussion paper – Inspection & Investigation - April 2026",
+    "opened": "2026-04-15",
+    "closed": "2026-04-28",
+    "url": "https://ibbi.gov.in/uploads/public_comments/DP-%20IBBI%20%28INSPECTION%20AND%20INVESTIGATION%29%20REGULATIONS%202017.pdf",
+    "comments_published": "unknown",
+    "basis": "Comments-on-Comments table row dated 15th April 2026; PDF on amendments to Inspection and Investigation Regulations 2017 states last date for comments 28th April 2026; Comments-of-the-Board cell empty."
+  },
+  {
+    "title": "Discussion Paper on Amendments to Insolvency and Bankruptcy Board of India (Information Utilities) Regulations, 2017",
+    "opened": "2026-04-15",
+    "closed": "2026-04-28",
+    "url": "https://ibbi.gov.in/uploads/public_comments/DP%20-%20IU%20Website%20version%202026.pdf",
+    "comments_published": "unknown",
+    "basis": "Comments-on-Comments table row dated 15th April 2026; PDF cover titled Amendments to IU Regulations 2017 states last date for comments 28th April 2026; Comments-of-the-Board cell empty."
+  }
+]
