@@ -21,7 +21,7 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 
 ## Quick facts
 - Consultation desks tracked: 6
-- Consultations tracked: 11
+- Consultations tracked: 13
 - Interests registered: 21
 - Documented door moves: 32
 
@@ -29,7 +29,7 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 No insinuation without a paper trail — access and influence are documented through
 published comments, RTI replies, minutes and appointment orders, not vibes.
 
-Built 2026-10-19 02:33 UTC.
+Built 2026-10-19 04:06 UTC.
 
 
 ## index.html
@@ -44,8 +44,8 @@ Layer 3 · rule-buyers · the sousveillance stack
  watching the watchers, room three 
 
  6 consultation desks 
- 11 consultations tracked 
- 1 open for comments 
+ 13 consultations tracked 
+ 3 open for comments 
  21 interests registered 
  32 documented door moves 
 
@@ -94,7 +94,7 @@ the rule-writer. Stance per desk, as verified on the regulator's own site.
 when comments are secret, you cannot tell whether a rule was rewritten for the industry
 that asked — or tested against the public that pays. RBI's 2022 Charges-in-Payment-Systems
 paper drew submissions from every major industry body; none were published, and the
-commenters had to self-publish. A rule made in a closed room still lands on your bill. Live consultations 2026-10-25 Public Consultation Paper on Recalibrating Economics of Insurance Distribution (commissions, EoM, Bima Sugam, Public Insurance Registry) IRDAI The full consultation ledger → The revolving door, on the record 2026-09-16 N.S. Vishwanathan → Finance Industry Development Council (FIDC — NBFC SRO) Reserve Bank of India 2026-07-05 Debasish Panda → Bandhan Bank Ltd Insurance Regulatory and Development Authority of India 2026-06-01 Ashwani Bhatia → ICICI Bank Ltd Securities and Exchange Board of India 2026-02-25 Ajay Tyagi → PRISM (Oravel Stays Ltd, Oyo parent) Securities and Exchange Board of India 2026-01-29 G. Mahalingam (Gurumoorthy Mahalingam) → Life Insurance Corporation of India Securities and Exchange Board of India 2025-12-19 B.P. Kanungo → IIFL Finance Ltd Reserve Bank of India The full door ledger →
+commenters had to self-publish. A rule made in a closed room still lands on your bill. Live consultations 2026-11-04 Consultation Paper: Review of ICDR provisions for SME IPOs SEBI 2026-11-03 Consultation Paper: LODR review — monitoring and disclosure of utilization of issue proceeds SEBI 2026-10-25 Public Consultation Paper on Recalibrating Economics of Insurance Distribution (commissions, EoM, Bima Sugam, Public Insurance Registry) IRDAI The full consultation ledger → The revolving door, on the record 2026-09-16 N.S. Vishwanathan → Finance Industry Development Council (FIDC — NBFC SRO) Reserve Bank of India 2026-07-05 Debasish Panda → Bandhan Bank Ltd Insurance Regulatory and Development Authority of India 2026-06-01 Ashwani Bhatia → ICICI Bank Ltd Securities and Exchange Board of India 2026-02-25 Ajay Tyagi → PRISM (Oravel Stays Ltd, Oyo parent) Securities and Exchange Board of India 2026-01-29 G. Mahalingam (Gurumoorthy Mahalingam) → Life Insurance Corporation of India Securities and Exchange Board of India 2025-12-19 B.P. Kanungo → IIFL Finance Ltd Reserve Bank of India The full door ledger →
 
 ## consultations.html
 
@@ -103,7 +103,7 @@ the consultation ledger
  Consultation papers of India's financial regulators — with the one fact
 that decides whether a consultation means anything: were the comments
 published? 
- ibbi 2 irdai 2 pfrda 1 rbi 3 sebi 3 
+ ibbi 2 irdai 2 pfrda 1 rbi 3 sebi 5 
 
  all 
  live 
@@ -113,6 +113,20 @@ published?
  comments: unknown 
 
  Opened Closed Consultation Desk Status Comments published? 
+
+ 14 Oct 2026 
+ 04 Nov 2026 
+ Consultation Paper: Review of ICDR provisions for SME IPOs SEBI invites feedback by 4 Nov 2026 on SME IPO eligibility and issue/allotment rules, among other matters; publication of submissions or response statement not verified. 
+ SEBI 
+ live 
+ unknown source 
+
+ 13 Oct 2026 
+ 03 Nov 2026 
+ Consultation Paper: LODR review — monitoring and disclosure of utilization of issue proceeds SEBI invites feedback by 3 Nov 2026 on monitoring-agency reporting and disclosure of issue-proceeds use; publication of submissions or response statement not verified. 
+ SEBI 
+ live 
+ unknown source 
 
  23 Sep 2026 
  25 Oct 2026 
@@ -602,7 +616,7 @@ three — the rule-buyers.
  What is in the register today 
 
  consultation desks scored 6 
- consultations tracked 11 
+ consultations tracked 13 
  interests registered 21 
  documented door moves 32 
 
