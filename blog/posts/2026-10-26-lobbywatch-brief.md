@@ -1,0 +1,16 @@
+---
+title: An extension, a new approval route, and two transparency tests
+date: 2026-10-26
+summary: IRDAI extended its distribution-reforms window after reporting 650+ comments; SEBI opened a proposal to shift some MII decisions to an automatic route, with board controls and reporting.
+category: weekly
+---
+
+# An extension, a new approval route, and two transparency tests
+
+From 19–26 October, the consultation ledger records two material changes. On 24 October, IRDAI extended the comment deadline for its insurance-distribution reforms from 25 to **31 October**, reporting more than **650 comments** received so far. The [official release](https://irdai.gov.in/document-detail?documentId=9944637) gives a count, not a breakdown of who commented or what positions they took. LobbyWatch still marks publication of comments and a response statement as **unknown** in its [consultation ledger](https://lobbywatch.cashlessconsumer.in/consultations.html). A large submission count shows activity; it cannot by itself show whose views were represented.
+
+On 22 October, SEBI opened a consultation on an [automatic approval route for specified related activities by market infrastructure institutions](https://www.sebi.gov.in/reports-and-statistics/reports/oct-2026/consultation-paper-on-review-of-regulation-38-2-of-the-secc-regulations-2018-and-regulation-7-c-i-of-the-dandp-regulations-2018-for-providing-an-automatic-approval-route-for-investment-in-related-a-_105391.html). The [paper](https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1792679265053.pdf) proposes that recognised stock exchanges and depositories—but not recognised clearing corporations—could use the route for defined activities without prior SEBI approval. Fund deployment would be capped at the lower of 5% of net worth or the regulatory minimum; each instance would require governing-board approval, with half-yearly reporting to SEBI. Comments are due **12 November**. The investor test is whether board controls and periodic reporting provide adequate scrutiny where case-by-case prior approval is removed. This is a proposal, not a rule in force.
+
+SEBI’s [issue-proceeds monitoring](https://www.sebi.gov.in/reports-and-statistics/reports/oct-2026/consultation-paper-on-recommendations-of-the-working-group-for-review-of-sebi-lodr-regulations-2015-review-of-framework-for-monitoring-and-disclosure-of-utilization-of-issue-proceeds_105242.html) and [SME IPO](https://www.sebi.gov.in/reports-and-statistics/reports/oct-2026/consultation-paper-on-recommendations-pursuant-to-review-of-provisions-of-sebi-issue-of-capital-and-disclosure-requirements-regulations-2018-related-to-initial-public-offer-by-small-and-medium-ente-_105252.html) consultations also remain open, with deadlines on 3 and 4 November respectively.
+
+The [doors ledger](https://lobbywatch.cashlessconsumer.in/doors.html) records no appointment dated 19–26 October. The [RTI log](https://lobbywatch.cashlessconsumer.in/access.html) still has two template-ready requests and no filed request. These are gaps in LobbyWatch’s records, not proof that no meetings or requests occurred. This week brings process movement—not evidence of who influenced a final rule. The next test is whether the submissions and regulatory reasoning become visible.
