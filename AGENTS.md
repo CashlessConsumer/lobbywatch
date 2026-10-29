@@ -26,7 +26,7 @@ Layer 3 (rule-buyers) of the sousveillance stack: RegTrac (rule-writers, `Projec
 
 - `scripts/bloggen.py` — builds `blog/index.html` + `blog/<slug>.html` from `blog/posts/*.md` (front matter: title, date, summary; body starts with an H1). Same pattern as SROTrac's bloggen. Inaugural post: 2026-09-26 launch note.
 - `scripts/refresh.sh` — daily refresh: gates (`tests/check_data.py`, `tests/verify_urls.py`, both non-fatal — SEBI/IRDAI walls curl from some egresses; GH-runners CI is the arbiter) → `build.py` → `bloggen.py` → second `build.py` (picks new posts up in sitemap/llms) → commit+push on change. No fetch step yet: consultation-index scraper is roadmap item 1; when it lands, add its fetch to refresh.sh.
-- Automations: daily refresh 08:00 IST `8de7b8fb-63bd-488b-b02f-1e3b25f25e51`; weekly blog brief Mon 09:30 IST (after the RegTrac/SROTrac 09:20 weeklies) `b59685aa-36af-4c11-a23c-38808801d2f6`. Both post one line to Discord #policy-research (1540886397621458).
+- Automations: daily refresh 08:00 IST `8de7b8fb-63bd-488b-b02f-1e3b25f25e51`; weekly blog brief Mon 09:30 IST (after the RegTrac/SROTrac 09:20 weeklies) `b59685aa-36af-4c11-a23c-38808801d2f6`. Both post one line to Discord #policy-research (1540886397622161458 — corrected 2026-10-28; the older ID 1540886397621458 returns Unknown Channel).
 
 ## Design language
 
