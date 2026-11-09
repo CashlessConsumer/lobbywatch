@@ -21,7 +21,7 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 
 ## Quick facts
 - Consultation desks tracked: 6
-- Consultations tracked: 14
+- Consultations tracked: 17
 - Interests registered: 21
 - Documented door moves: 32
 
@@ -29,7 +29,7 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 No insinuation without a paper trail — access and influence are documented through
 published comments, RTI replies, minutes and appointment orders, not vibes.
 
-Built 2026-11-09 02:32 UTC.
+Built 2026-11-09 04:07 UTC.
 
 
 ## index.html
@@ -44,8 +44,8 @@ Layer 3 · rule-buyers · the sousveillance stack
  watching the watchers, room three 
 
  6 consultation desks 
- 14 consultations tracked 
- 3 open for comments 
+ 17 consultations tracked 
+ 4 open for comments 
  21 interests registered 
  32 documented door moves 
 
@@ -94,7 +94,7 @@ the rule-writer. Stance per desk, as verified on the regulator's own site.
 when comments are secret, you cannot tell whether a rule was rewritten for the industry
 that asked — or tested against the public that pays. RBI's 2022 Charges-in-Payment-Systems
 paper drew submissions from every major industry body; none were published, and the
-commenters had to self-publish. A rule made in a closed room still lands on your bill. Live consultations 2026-11-12 Consultation Paper: automatic approval route for investment in related activities by MIIs SEBI 2026-11-04 Consultation Paper: Review of ICDR provisions for SME IPOs SEBI 2026-11-03 Consultation Paper: LODR review — monitoring and disclosure of utilization of issue proceeds SEBI The full consultation ledger → The revolving door, on the record 2026-09-16 N.S. Vishwanathan → Finance Industry Development Council (FIDC — NBFC SRO) Reserve Bank of India 2026-07-05 Debasish Panda → Bandhan Bank Ltd Insurance Regulatory and Development Authority of India 2026-06-01 Ashwani Bhatia → ICICI Bank Ltd Securities and Exchange Board of India 2026-02-25 Ajay Tyagi → PRISM (Oravel Stays Ltd, Oyo parent) Securities and Exchange Board of India 2026-01-29 G. Mahalingam (Gurumoorthy Mahalingam) → Life Insurance Corporation of India Securities and Exchange Board of India 2025-12-19 B.P. Kanungo → IIFL Finance Ltd Reserve Bank of India The full door ledger →
+commenters had to self-publish. A rule made in a closed room still lands on your bill. Live consultations 2026-11-27 Consultation Paper: AML/CFT certification requirement for Principal Officers of intermediaries (NISM exam, six-month compliance window) SEBI 2026-11-26 Consolidation of PSL instructions — five draft Directions (Commercial Banks, SFBs, LABs, RRBs, UCBs – Priority Sector Lending – Targets and Classification), 2026 RBI 2026-11-23 Exposure Draft: IRDAI (Subsidiary Instructions and Consultative Committees) Regulations, 2026 IRDAI 2026-11-12 Consultation Paper: automatic approval route for investment in related activities by MIIs SEBI The full consultation ledger → The revolving door, on the record 2026-09-16 N.S. Vishwanathan → Finance Industry Development Council (FIDC — NBFC SRO) Reserve Bank of India 2026-07-05 Debasish Panda → Bandhan Bank Ltd Insurance Regulatory and Development Authority of India 2026-06-01 Ashwani Bhatia → ICICI Bank Ltd Securities and Exchange Board of India 2026-02-25 Ajay Tyagi → PRISM (Oravel Stays Ltd, Oyo parent) Securities and Exchange Board of India 2026-01-29 G. Mahalingam (Gurumoorthy Mahalingam) → Life Insurance Corporation of India Securities and Exchange Board of India 2025-12-19 B.P. Kanungo → IIFL Finance Ltd Reserve Bank of India The full door ledger →
 
 ## consultations.html
 
@@ -103,7 +103,7 @@ the consultation ledger
  Consultation papers of India's financial regulators — with the one fact
 that decides whether a consultation means anything: were the comments
 published? 
- ibbi 2 irdai 2 pfrda 1 rbi 3 sebi 6 
+ ibbi 2 irdai 3 pfrda 1 rbi 4 sebi 7 
 
  all 
  live 
@@ -114,6 +114,27 @@ published?
 
  Opened Closed Consultation Desk Status Comments published? 
 
+ 06 Nov 2026 
+ 27 Nov 2026 
+ Consultation Paper: AML/CFT certification requirement for Principal Officers of intermediaries (NISM exam, six-month compliance window) SEBI paper of 6 Nov 2026 proposes mandatory AML/CFT certification (exam developed with NISM, launched 28 Feb 2025) for principal officers of all s.12 intermediaries, with a proposed six-month compliance period; comments via SEBI online form by 27 Nov 2026. Draft circular at Annexure A. 
+ SEBI 
+ live 
+ unknown source 
+
+ 05 Nov 2026 
+ 26 Nov 2026 
+ Consolidation of PSL instructions — five draft Directions (Commercial Banks, SFBs, LABs, RRBs, UCBs – Priority Sector Lending – Targets and Classification), 2026 RBI press release 2026-2027/1447 (5 Nov 2026) places five entity-wise draft Directions on the website; comments via Connect 2 Regulate or email by 26 Nov 2026; instructions not consolidated would be repealed on issuance. Publication of comments or response statement not specified. 
+ RBI 
+ live 
+ unknown source 
+
+ 03 Nov 2026 
+ 23 Nov 2026 
+ Exposure Draft: IRDAI (Subsidiary Instructions and Consultative Committees) Regulations, 2026 Exposure draft dated 3 Nov 2026 operationalises SBSR Act sections 114B/114C; comments by email to named IRDAI officials by 23 Nov 2026. Split from the June 2026 regulation-making draft (irdai-regmaking-2026). FLAG: IRDAI's own exposure-drafts page did not list this draft as of 2026-11-09 (latest entry 31-07-2026) — recheck for an IRDAI-hosted document URL. 
+ IRDAI 
+ live 
+ unknown source 
+
  22 Oct 2026 
  12 Nov 2026 
  Consultation Paper: automatic approval route for investment in related activities by MIIs Proposal: MIIs other than recognized clearing corporations may use automatic approval for specified related activities; fund deployment is capped at the lower of 5% of net worth or regulatory minimum, with governing-board approval and half-year reporting. Not a rule in force. 
@@ -123,16 +144,16 @@ published?
 
  14 Oct 2026 
  04 Nov 2026 
- Consultation Paper: Review of ICDR provisions for SME IPOs SEBI invites feedback by 4 Nov 2026 on SME IPO eligibility and issue/allotment rules, among other matters; publication of submissions or response statement not verified. 
+ Consultation Paper: Review of ICDR provisions for SME IPOs SEBI invites feedback by 4 Nov 2026 on SME IPO eligibility and issue/allotment rules, among other matters; publication of submissions or response statement not verified.; window shut on its stated deadline; publication of submissions or response statement not verified. 
  SEBI 
- live 
+ closed 
  unknown source 
 
  13 Oct 2026 
  03 Nov 2026 
- Consultation Paper: LODR review — monitoring and disclosure of utilization of issue proceeds SEBI invites feedback by 3 Nov 2026 on monitoring-agency reporting and disclosure of issue-proceeds use; publication of submissions or response statement not verified. 
+ Consultation Paper: LODR review — monitoring and disclosure of utilization of issue proceeds SEBI invites feedback by 3 Nov 2026 on monitoring-agency reporting and disclosure of issue-proceeds use; publication of submissions or response statement not verified.; window shut on its stated deadline; publication of submissions or response statement not verified. 
  SEBI 
- live 
+ closed 
  unknown source 
 
  23 Sep 2026 
@@ -623,7 +644,7 @@ three — the rule-buyers.
  What is in the register today 
 
  consultation desks scored 6 
- consultations tracked 14 
+ consultations tracked 17 
  interests registered 21 
  documented door moves 32 
 
