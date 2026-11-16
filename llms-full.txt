@@ -21,7 +21,7 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 
 ## Quick facts
 - Consultation desks tracked: 6
-- Consultations tracked: 17
+- Consultations tracked: 20
 - Interests registered: 21
 - Documented door moves: 32
 
@@ -29,7 +29,7 @@ Base URL: https://lobbywatch.cashlessconsumer.in
 No insinuation without a paper trail — access and influence are documented through
 published comments, RTI replies, minutes and appointment orders, not vibes.
 
-Built 2026-11-16 02:32 UTC.
+Built 2026-11-16 04:09 UTC.
 
 
 ## index.html
@@ -44,8 +44,8 @@ Layer 3 · rule-buyers · the sousveillance stack
  watching the watchers, room three 
 
  6 consultation desks 
- 17 consultations tracked 
- 4 open for comments 
+ 20 consultations tracked 
+ 5 open for comments 
  21 interests registered 
  32 documented door moves 
 
@@ -94,7 +94,7 @@ the rule-writer. Stance per desk, as verified on the regulator's own site.
 when comments are secret, you cannot tell whether a rule was rewritten for the industry
 that asked — or tested against the public that pays. RBI's 2022 Charges-in-Payment-Systems
 paper drew submissions from every major industry body; none were published, and the
-commenters had to self-publish. A rule made in a closed room still lands on your bill. Live consultations 2026-11-27 Consultation Paper: AML/CFT certification requirement for Principal Officers of intermediaries (NISM exam, six-month compliance window) SEBI 2026-11-26 Consolidation of PSL instructions — five draft Directions (Commercial Banks, SFBs, LABs, RRBs, UCBs – Priority Sector Lending – Targets and Classification), 2026 RBI 2026-11-23 Exposure Draft: IRDAI (Subsidiary Instructions and Consultative Committees) Regulations, 2026 IRDAI 2026-11-12 Consultation Paper: automatic approval route for investment in related activities by MIIs SEBI The full consultation ledger → The revolving door, on the record 2026-09-16 N.S. Vishwanathan → Finance Industry Development Council (FIDC — NBFC SRO) Reserve Bank of India 2026-07-05 Debasish Panda → Bandhan Bank Ltd Insurance Regulatory and Development Authority of India 2026-06-01 Ashwani Bhatia → ICICI Bank Ltd Securities and Exchange Board of India 2026-02-25 Ajay Tyagi → PRISM (Oravel Stays Ltd, Oyo parent) Securities and Exchange Board of India 2026-01-29 G. Mahalingam (Gurumoorthy Mahalingam) → Life Insurance Corporation of India Securities and Exchange Board of India 2025-12-19 B.P. Kanungo → IIFL Finance Ltd Reserve Bank of India The full door ledger →
+commenters had to self-publish. A rule made in a closed room still lands on your bill. Live consultations 2026-11-30 Consultation Paper: Offering 'Model Portfolio' by Research Entities in the IFSC IFSCA 2026-11-30 Consultation Paper: Guidelines for engaging Financial Solicitation Professionals (FSPs), with draft circular IFSCA 2026-11-27 Consultation Paper: AML/CFT certification requirement for Principal Officers of intermediaries (NISM exam, six-month compliance window) SEBI 2026-11-26 Consolidation of PSL instructions — five draft Directions (Commercial Banks, SFBs, LABs, RRBs, UCBs – Priority Sector Lending – Targets and Classification), 2026 RBI 2026-11-23 Exposure Draft: IRDAI (Subsidiary Instructions and Consultative Committees) Regulations, 2026 IRDAI The full consultation ledger → The revolving door, on the record 2026-09-16 N.S. Vishwanathan → Finance Industry Development Council (FIDC — NBFC SRO) Reserve Bank of India 2026-07-05 Debasish Panda → Bandhan Bank Ltd Insurance Regulatory and Development Authority of India 2026-06-01 Ashwani Bhatia → ICICI Bank Ltd Securities and Exchange Board of India 2026-02-25 Ajay Tyagi → PRISM (Oravel Stays Ltd, Oyo parent) Securities and Exchange Board of India 2026-01-29 G. Mahalingam (Gurumoorthy Mahalingam) → Life Insurance Corporation of India Securities and Exchange Board of India 2025-12-19 B.P. Kanungo → IIFL Finance Ltd Reserve Bank of India The full door ledger →
 
 ## consultations.html
 
@@ -103,7 +103,7 @@ the consultation ledger
  Consultation papers of India's financial regulators — with the one fact
 that decides whether a consultation means anything: were the comments
 published? 
- ibbi 2 irdai 3 pfrda 1 rbi 4 sebi 7 
+ ibbi 2 ifsca 2 irdai 3 pfrda 1 rbi 4 sebi 8 
 
  all 
  live 
@@ -113,6 +113,20 @@ published?
  comments: unknown 
 
  Opened Closed Consultation Desk Status Comments published? 
+
+ 09 Nov 2026 
+ 30 Nov 2026 
+ Consultation Paper: Offering 'Model Portfolio' by Research Entities in the IFSC Clarifies research recommendations under CMI Regulations 2025 to include model portfolios (weighted baskets); broker-dealers and others would register as research entities to offer them. Proposal follows industry representations (Business Standard, 9 Nov 2026). Comments due 30 Nov 2026; comment publication not specified. 
+ IFSCA 
+ live 
+ unknown source 
+
+ 09 Nov 2026 
+ 30 Nov 2026 
+ Consultation Paper: Guidelines for engaging Financial Solicitation Professionals (FSPs), with draft circular Disclosure-based framework for outside individuals soliciting on behalf of regulated FIs in GIFT IFSC, with a public FSP list proposed; draft circular at Annexure A. Comments due 30 Nov 2026 to named IFSCA officers per the paper; comment publication not specified. 
+ IFSCA 
+ live 
+ unknown source 
 
  06 Nov 2026 
  27 Nov 2026 
@@ -139,7 +153,7 @@ published?
  12 Nov 2026 
  Consultation Paper: automatic approval route for investment in related activities by MIIs Proposal: MIIs other than recognized clearing corporations may use automatic approval for specified related activities; fund deployment is capped at the lower of 5% of net worth or regulatory minimum, with governing-board approval and half-year reporting. Not a rule in force. 
  SEBI 
- live 
+ closed 
  unknown source 
 
  14 Oct 2026 
@@ -158,7 +172,7 @@ published?
 
  23 Sep 2026 
  31 Oct 2026 
- Public Consultation Paper on Recalibrating Economics of Insurance Distribution (commissions, EoM, Bima Sugam, Public Insurance Registry) Window closed 31 Oct 2026 per IRDAI's 24 Oct release (>650 comments; deadline extended from 25 Oct). Submissions went via the IIB portal/Excel template/email; publication of comments or a response statement remains unverified. 
+ Public Consultation Paper on Recalibrating Economics of Insurance Distribution (commissions, EoM, Bima Sugam, Public Insurance Registry) Window closed 31 Oct 2026 per IRDAI's 24 Oct release (>650 comments; deadline extended from 25 Oct). Submissions went via the IIB portal/Excel template/email; publication of comments or a response statement remains unverified. Reported volume grew to 2 lakh+ comments from ~15,000 stakeholders by 13 November (ET Now); IRDAI is targeting draft rules by mid-December per sources, and the chairman's reported meetings with broker bodies remain press-sourced, not minutes-disclosed. 
  IRDAI 
  closed 
  unknown source 
@@ -195,6 +209,13 @@ published?
 
  Consultation Paper to Align Valuation Practices in the NPS Architecture Released with an invitation for stakeholder comments; PFRDA's comment-publication practice is the open question this register tracks. 
  PFRDA 
+ closed 
+ unknown source 
+
+ 20 Jun 2025 
+ 11 Jul 2025 
+ Consultation Paper: Guidelines for Responsible Usage of AI/ML in Indian Securities Markets (5 guiding principles) Outcome signal 15 Nov 2026: SEBI chief Tuhin Kanta Pandey said AI-usage guidelines for capital markets are coming, with guardrails on disclosure, accountability and human-in-the-loop (PTI, 15 Nov 2026). Comment publication from the 2025 window remains unverified. 
+ SEBI 
  closed 
  unknown source 
 
@@ -644,7 +665,7 @@ three — the rule-buyers.
  What is in the register today 
 
  consultation desks scored 6 
- consultations tracked 17 
+ consultations tracked 20 
  interests registered 21 
  documented door moves 32 
 
